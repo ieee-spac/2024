@@ -33,8 +33,20 @@ export const Contact = () => {
               <span className="label-text text-base">E-Mail Address</span>
             </div>
             <input
-              type="E-Mail Address"
+              type="email"
               placeholder="Your E-mail Address"
+              className="input input-bordered focus:input-secondary"
+            />
+          </label>
+
+          {/* Subject */}
+          <label className="form-control w-full max-w-lg">
+            <div className="label">
+              <span className="label-text text-base">Subject</span>
+            </div>
+            <input
+              type="text"
+              placeholder="Subject"
               className="input input-bordered focus:input-secondary"
             />
           </label>
