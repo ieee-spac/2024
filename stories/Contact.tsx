@@ -22,7 +22,7 @@ export const Contact = () => {
             </div>
             <input
               type="text"
-              placeholder="Type here"
+              placeholder="Your Full Name"
               className="input input-bordered focus:input-secondary"
             />
           </label>
@@ -34,7 +34,7 @@ export const Contact = () => {
             </div>
             <input
               type="E-Mail Address"
-              placeholder="Type here"
+              placeholder="Your E-mail Address"
               className="input input-bordered focus:input-secondary"
             />
           </label>
@@ -45,8 +45,8 @@ export const Contact = () => {
               <span className="label-text text-base">Message</span>
             </div>
             <textarea
-              className="textarea textarea-bordered focus:input-secondary text-base"
-              placeholder="Please note that this website is still in development, and this contact form is not working😵‍💫 If you don't want your message getting lost in the void, please email lead@ieeespac.ca directly."
+              className="textarea textarea-bordered focus:input-secondary text-base min-h-56"
+              placeholder="Your Message"
             ></textarea>
           </label>
 
