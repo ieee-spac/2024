@@ -1,14 +1,14 @@
 import type { StaticImageData } from "next/image";
 import Image from "next/image";
-import nokia_logo from "./assets/nokia_logo.svg";
-import fdm_logo from "./assets/fdm_logo.svg";
-import ciena_logo from "./assets/ciena_logo.svg";
-import public_service_commission_of_canada_logo from "./assets/public_service_commission_of_canada_logo.svg";
-import drdc_canada_logo from "./assets/drdc_canada_logo.svg";
-import ross_video_logo from "./assets/ross_video_logo.svg";
-import uber_logo from "./assets/uber_logo.svg";
-import general_dynamics_logo from "./assets/general_dynamics_logo.svg";
-import { Spotlight } from "./Spotlight";
+import nokia_logo from "@/assets/nokia_logo.svg";
+import fdm_logo from "@/assets/fdm_logo.svg";
+import ciena_logo from "@/assets/ciena_logo.svg";
+import public_service_commission_of_canada_logo from "@/assets/public_service_commission_of_canada_logo.svg";
+import drdc_canada_logo from "@/assets/drdc_canada_logo.svg";
+import ross_video_logo from "@/assets/ross_video_logo.svg";
+import uber_logo from "@/assets/uber_logo.svg";
+import general_dynamics_logo from "@/assets/general_dynamics_logo.svg";
+import { Spotlight } from "@/components/ui/spotlight/spotlight";
 
 // Logo and Tier types
 type Logo = {

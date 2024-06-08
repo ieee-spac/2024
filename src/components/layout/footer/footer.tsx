@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import ieee_spac_logo_combined_horizontal from "/assets/ieee_spac_logo_combined_horizontal.svg";
+import ieee_spac_logo_combined_horizontal from "@/assets/ieee_spac_logo_combined_horizontal.svg";
 
 export const Footer = () => {
   return (

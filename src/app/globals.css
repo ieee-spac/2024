@@ -36,8 +36,8 @@
   @apply inline-flex transition transform ease-in-out duration-500 hover:scale-105 hover:text-neutral no-underline;
 }
 
-.backdrop-blur-xs{
-  @apply backdrop-blur-[2px]
+.backdrop-blur-xs {
+  @apply backdrop-blur-[2px];
 }
 
 @keyframes bobbing {

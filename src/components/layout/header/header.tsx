@@ -3,8 +3,8 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "/assets/ieee_spac_logo_vertical_no_year.svg";
-import { HamburgerButton } from "@/components/ui/hamburger-button";
+import Logo from "@/assets/ieee_spac_logo_vertical_no_year.svg";
+import { HamburgerButton } from "@/components/ui/hamburger-button/hamburger-button";
 
 const links = [
   { name: "Home", path: "/" },
