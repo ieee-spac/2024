@@ -1,45 +1,36 @@
-# 2024 IEEE SPAC Website
-2024 edition of the IEEE SPAC (Student Professional Awareness Conference) website. The conference takes place in Ottawa, Ontario and is co-hosted by the IEEE chapters of the University of Ottawa and Carleton University.
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-<details>
-<summary>Learning Log</summary>
-<br>
+## Getting Started
 
-<details>
-  <summary>Project Management</summary>
-<br>
+First, run the development server:
 
-  - Prioritizing tasks and not getting bogged down.
-</details>
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-<details>
-  <summary>UI/UX Design</summary>
-<br>
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-  - Studying [brand guidelines](https://brand-experience.ieee.org/) and adhering to them.
-  - Mapping multiple color palettes through a multi-stage process.
-  - Using Figma variables with variants to create styles.
-  - Creating a typography system.
-  - Creating logo variations.
-  - Using auto layout to neatly organize elements and components.
-  </details>
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-  <details>
-  <summary>Front-End Development</summary>
-<br>
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-  - Using [Storybook](https://storybook.js.org/) to develop components in isolation.
-  - Using [DaisyUI](https://daisyui.com/) to build out UI quickly.
-  - Rendering responsive Navbar with a single mapping function.
+## Learn More
 
-  </details>
+To learn more about Next.js, take a look at the following resources:
 
-  <details>
-  <summary>Back-End Development</summary>
-<br>
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-  - 
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-  </details>
+## Deploy on Vercel
 
-</details>
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
