@@ -1,3 +1,4 @@
+/* eslint-disable react/button-has-type */
 import Image from 'next/image';
 
 import logo from '@/public/assets/spac_logo_year_stars.svg';

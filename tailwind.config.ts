@@ -1,3 +1,4 @@
+/* eslint-disable func-names */
 /* eslint-disable import/no-extraneous-dependencies */
 import daisyui from 'daisyui';
 import svgToDataUri from 'mini-svg-data-uri';

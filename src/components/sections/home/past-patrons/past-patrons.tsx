@@ -1,3 +1,4 @@
+/* eslint-disable react/button-has-type */
 import type { StaticImageData } from 'next/image';
 import Image from 'next/image';
 

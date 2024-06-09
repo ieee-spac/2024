@@ -1,7 +1,8 @@
+/* eslint-disable no-console */
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-import { EmailTemplate } from '@/components/EmailTemplate';
+import { EmailTemplate } from '@/components/templates/email-template';
 
 // Initialize Resend with API key
 const resend = new Resend(process.env.RESEND_API_KEY);

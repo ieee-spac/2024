@@ -1,3 +1,4 @@
+/* eslint-disable react/button-has-type */
 export const HamburgerButton = ({
   menuOpen,
   setMenuOpen,
