@@ -1,12 +1,13 @@
-import Image from "next/image";
-import Link from "next/link";
-import ieee_spac_logo_combined_horizontal from "@/assets/ieee_spac_logo_combined_horizontal.svg";
+import Image from 'next/image';
+import Link from 'next/link';
+
+import ieee_spac_logo_combined_horizontal from '@/public/assets/ieee_spac_logo_combined_horizontal.svg';
 
 export const Footer = () => {
   return (
-    <footer className="border-t-[0.25px] border-secondary text-neutral-content transition-all duration-700 hover:shadow-[0_0px_15px_rgba(0,202,255,0.5)]">
-      <footer className="footer items-center max-w-7xl w-full mx-auto px-3 md:px-8 py-4">
-        <aside className="items-center grid-flow-col">
+    <footer className="border-secondary text-neutral-content border-t-[0.25px] transition-all duration-700 hover:shadow-[0_0px_15px_rgba(0,202,255,0.5)]">
+      <footer className="footer mx-auto  w-full max-w-7xl items-center px-3 py-4 md:px-8">
+        <aside className="grid-flow-col items-center">
           <Link href="/">
             <Image
               src={ieee_spac_logo_combined_horizontal}
@@ -18,9 +19,10 @@ export const Footer = () => {
         </aside>
 
         {/* Social Media Icons */}
-        <nav className="grid-flow-col gap-4 justify-center w-full md:w-fit md:place-self-center md:justify-self-end">
+        <nav className="w-full grid-flow-col justify-center gap-4 md:w-fit md:place-self-center md:justify-self-end">
           {/* Instagram Logo */}
           <a
+            aria-label="Instagram Link"
             href="https://www.instagram.com/ieeespac/?hl=en"
             target="_blank"
             className="transition-all duration-700 hover:scale-125 hover:text-rose-500"
@@ -38,6 +40,7 @@ export const Footer = () => {
 
           {/* Facebook Logo */}
           <a
+            aria-label="Facebook Link"
             href="https://www.facebook.com/ieeespacottawa/"
             target="_blank"
             className="transition-all duration-700 hover:scale-125 hover:text-blue-600"
@@ -49,7 +52,7 @@ export const Footer = () => {
               viewBox="0 0 24 24"
               className="fill-current"
             >
-              <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
+              <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
             </svg>
           </a>
         </nav>

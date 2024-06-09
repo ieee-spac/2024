@@ -13,7 +13,7 @@ export const EmailTemplate: React.FC<
         <p>{message}</p>
       ) : (
         <div>
-          {/* Message to sender from SPAC 2024 Team*/}
+          {/* Message to sender from SPAC 2024 Team */}
           <p>Hello {fullName},</p>
           <p>
             Thank you for taking the time to fill out the form on our website.
