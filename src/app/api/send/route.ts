@@ -1,13 +1,14 @@
-import { EmailTemplate } from "@/components/EmailTemplate";
-import { NextResponse } from "next/server";
-import { Resend } from "resend";
+import { NextResponse } from 'next/server';
+import { Resend } from 'resend';
+
+import { EmailTemplate } from '@/components/EmailTemplate';
 
 // Initialize Resend with API key
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 // Define email addresses
-const TEAM_EMAIL = "webmaster@ieeespac.ca";
-const FORM_SUBMISSION_EMAIL = "formsubmission@ieeespac.ca";
+const TEAM_EMAIL = 'webmaster@ieeespac.ca';
+const FORM_SUBMISSION_EMAIL = 'formsubmission@ieeespac.ca';
 
 export async function POST(request: Request) {
   try {
@@ -20,7 +21,7 @@ export async function POST(request: Request) {
       to: TEAM_EMAIL,
       subject: body.subject,
       react: EmailTemplate({ message: body.message, toTeam: true }),
-      text: "",
+      text: '',
       reply_to: body.email,
     });
 
@@ -29,14 +30,14 @@ export async function POST(request: Request) {
       await resend.emails.send({
         from: `SPAC 2024 Team <${FORM_SUBMISSION_EMAIL}>`,
         to: body.email,
-        subject: "SPAC 2024 - Thank you for your message!",
+        subject: 'SPAC 2024 - Thank you for your message!',
         react: EmailTemplate({
           fullName: body.fullName,
           subject: body.subject,
           message: body.message,
           toTeam: false,
         }),
-        text: "",
+        text: '',
         reply_to: TEAM_EMAIL,
       });
     }
@@ -45,7 +46,7 @@ export async function POST(request: Request) {
     return NextResponse.json(emailToTeam);
   } catch (error) {
     // Log and return error response
-    console.error("Error sending email:", error);
+    console.error('Error sending email:', error);
     return NextResponse.json({ error });
   }
 }

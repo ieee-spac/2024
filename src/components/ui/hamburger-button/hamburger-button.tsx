@@ -15,7 +15,7 @@ export const HamburgerButton = ({
 
   return (
     <button
-      className="text-secondary-content focus:outline-secondary relative size-10 scale-150 md:hidden"
+      className="relative size-10 scale-150 text-secondary-content focus:outline-secondary md:hidden"
       onClick={() => setMenuOpen(!menuOpen)}
       aria-expanded={menuOpen}
     >

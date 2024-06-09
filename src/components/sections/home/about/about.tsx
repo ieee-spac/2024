@@ -67,7 +67,7 @@ const SectionItem = ({
   >
     {/* Text Container */}
     <div className="flex w-1/2 flex-col justify-center">
-      <h4 className="text-base-content text-xl font-semibold sm:text-2xl md:text-3xl">
+      <h4 className="text-xl font-semibold text-base-content sm:text-2xl md:text-3xl">
         {title}
       </h4>
       <p className="text-sm text-stone-400 sm:text-base md:text-lg">
@@ -94,7 +94,7 @@ export const About = () => {
   return (
     <article className="overflow-none mx-auto mt-20 max-w-3xl space-y-10 px-3 md:px-8">
       <section className="space-y-8">
-        <h2 className="text-primary text-5xl font-bold sm:text-6xl">
+        <h2 className="text-5xl font-bold text-primary sm:text-6xl">
           About Us
         </h2>
         <p className="text-base-content">
@@ -112,7 +112,7 @@ export const About = () => {
 
         {/* Colour Bubbles */}
         <div className="grid h-[38vw] max-h-56 grid-flow-col justify-center">
-          <div className="bg-accent text-accent-content bobbing-animation-1 flex aspect-square h-full items-center justify-center rounded-full text-center sm:-mr-1">
+          <div className="bobbing-animation-1 flex aspect-square h-full items-center justify-center rounded-full bg-accent text-center text-accent-content sm:-mr-1">
             <div>
               <h4 className="text-5xl font-bold min-[375px]:text-6xl min-[425px]:text-7xl sm:text-8xl">
                 <CountUp end={100} duration={3} enableScrollSpy scrollSpyOnce />
@@ -122,7 +122,7 @@ export const About = () => {
               </p>
             </div>
           </div>
-          <div className="bg-neutral text-neutral-content bobbing-animation-4 -mr-4 flex aspect-square h-[49%] items-center justify-center self-end rounded-full text-center sm:-mr-8">
+          <div className="bobbing-animation-4 -mr-4 flex aspect-square h-[49%] items-center justify-center self-end rounded-full bg-neutral text-center text-neutral-content sm:-mr-8">
             <div>
               <h4 className="text-xl font-bold min-[375px]:text-3xl min-[425px]:text-4xl sm:text-5xl">
                 <CountUp end={200} duration={3} enableScrollSpy scrollSpyOnce />
@@ -132,7 +132,7 @@ export const About = () => {
               </p>
             </div>
           </div>
-          <div className="bg-warning text-warning-content bobbing-animation-2 -mr-3 flex aspect-square h-[65%] items-center justify-center self-start rounded-full text-center sm:-mr-5">
+          <div className="bobbing-animation-2 -mr-3 flex aspect-square h-[65%] items-center justify-center self-start rounded-full bg-warning text-center text-warning-content sm:-mr-5">
             <div>
               <h4 className="text-4xl font-bold min-[425px]:text-5xl sm:text-6xl">
                 <CountUp end={9} duration={3} enableScrollSpy scrollSpyOnce />
@@ -142,7 +142,7 @@ export const About = () => {
               </p>
             </div>
           </div>
-          <div className="bg-secondary text-secondary-content bobbing-animation-3 flex aspect-square h-[59%] items-center justify-center self-end rounded-full text-center">
+          <div className="bobbing-animation-3 flex aspect-square h-[59%] items-center justify-center self-end rounded-full bg-secondary text-center text-secondary-content">
             <div>
               <h4 className="text-3xl font-bold min-[375px]:text-4xl min-[425px]:text-5xl sm:text-6xl">
                 <CountUp end={300} duration={3} enableScrollSpy scrollSpyOnce />

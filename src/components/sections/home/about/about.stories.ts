@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { fn } from '@storybook/test';
+
 import { About } from './about';
 
 const meta = {
@@ -11,13 +11,10 @@ const meta = {
     // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
     layout: 'fullscreen',
   },
-  args: {
-  },
+  args: {},
 } satisfies Meta<typeof About>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
-
-};
+export const Default: Story = {};

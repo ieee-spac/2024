@@ -80,20 +80,18 @@ const patronsData: Tier = {
   ],
 };
 
-interface LogoSectionProps {
-  title: string;
-  titleColor: string;
-  logos: Logo[];
-  gradientClass: string;
-}
-
 // Render logos for each section
 const LogoSection = ({
   title,
   titleColor,
   logos,
   gradientClass,
-}: LogoSectionProps) => (
+}: {
+  title: string;
+  titleColor: string;
+  logos?: Logo[];
+  gradientClass: string;
+}) => (
   <>
     <h3
       className={`text-3xl font-semibold sm:text-4xl md:text-5xl ${titleColor} mb-4`}
@@ -104,21 +102,22 @@ const LogoSection = ({
       className={`block bg-gradient-to-r ${gradientClass} mb-4 p-[0.5px]`}
     />
     <div className="mb-8 flex items-end">
-      {logos.map((logo) => (
-        <a
-          key={logo.alt}
-          href={logo.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`flex items-center justify-center ${logo.overrides} p-2`}
-        >
-          <Image
-            src={logo.src}
-            alt={logo.alt}
-            className="transition-all duration-700 hover:scale-110"
-          />
-        </a>
-      ))}
+      {logos &&
+        logos.map((logo) => (
+          <a
+            key={logo.alt}
+            href={logo.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`flex items-center justify-center ${logo.overrides} p-2`}
+          >
+            <Image
+              src={logo.src}
+              alt={logo.alt}
+              className="transition-all duration-700 hover:scale-110"
+            />
+          </a>
+        ))}
     </div>
   </>
 );
@@ -126,7 +125,7 @@ const LogoSection = ({
 export const PastPatrons = () => {
   return (
     <div className="mx-auto mt-20 max-w-3xl px-3 md:px-8">
-      <h2 className="text-primary mb-10 text-5xl font-bold sm:text-6xl">
+      <h2 className="mb-10 text-5xl font-bold text-primary sm:text-6xl">
         Past Patrons
       </h2>
       <Spotlight

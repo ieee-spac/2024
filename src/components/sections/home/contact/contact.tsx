@@ -42,20 +42,20 @@ export const Contact = () => {
 
   return (
     <div className="overflow-none mx-auto my-20 max-w-3xl space-y-10 px-3 md:px-8">
-      <h3 className="text-primary text-5xl font-bold sm:text-6xl">Contact</h3>
+      <h3 className="text-5xl font-bold text-primary sm:text-6xl">Contact</h3>
 
       {/* Browser Container */}
-      <div className="mockup-browser border-base-300 border transition-all duration-700 hover:shadow-[0_0px_15px_rgba(0,202,255,0.5)]">
+      <div className="mockup-browser border border-base-300 transition-all duration-700 hover:shadow-[0_0px_15px_rgba(0,202,255,0.5)]">
         {/* Browser Toolbar */}
         <div className="mockup-browser-toolbar">
-          <p className="input border-base-300 border">Get in touch :)</p>
+          <p className="input border border-base-300">Get in touch :)</p>
         </div>
 
         {/* Form Container */}
         <form
           action=""
           onSubmit={handleSubmit}
-          className="border-base-300 flex w-full flex-col items-center justify-center space-y-5 border-t px-4 py-16"
+          className="flex w-full flex-col items-center justify-center space-y-5 border-t border-base-300 px-4 py-16"
         >
           {/* Full Name */}
           <label className="form-control w-full max-w-lg">
@@ -109,7 +109,7 @@ export const Contact = () => {
             </div>
             <textarea
               name="message"
-              className="textarea textarea-bordered focus:input-secondary min-h-56 text-base"
+              className="textarea textarea-bordered min-h-56 text-base focus:input-secondary"
               placeholder="Your Message"
               onChange={handleChange}
               value={formData.message}

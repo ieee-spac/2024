@@ -5,7 +5,7 @@ import ieee_spac_logo_combined_horizontal from '@/public/assets/ieee_spac_logo_c
 
 export const Footer = () => {
   return (
-    <footer className="border-secondary text-neutral-content border-t-[0.25px] transition-all duration-700 hover:shadow-[0_0px_15px_rgba(0,202,255,0.5)]">
+    <footer className="border-t-[0.25px] border-secondary text-neutral-content transition-all duration-700 hover:shadow-[0_0px_15px_rgba(0,202,255,0.5)]">
       <footer className="footer mx-auto  w-full max-w-7xl items-center px-3 py-4 md:px-8">
         <aside className="grid-flow-col items-center">
           <Link href="/">

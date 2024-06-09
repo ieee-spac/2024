@@ -22,7 +22,7 @@ const NavigationLinks = ({ onCloseMenu }: { onCloseMenu: () => void }) => (
     {links.map((link) => (
       <Link key={link.name} href={link.path}>
         <button
-          className="btn btn-block btn-lg btn-primary btn-outline md:btn-ghost bg-black/[0.25] uppercase md:bg-black/[0.25]"
+          className="btn btn-outline btn-primary btn-lg btn-block bg-black/[0.25] uppercase md:btn-ghost md:bg-black/[0.25]"
           onClick={onCloseMenu}
         >
           {link.name}
@@ -52,7 +52,7 @@ export const Header = () => {
   return (
     <>
       {/* Top Header */}
-      <header className="navbar border-b-secondary fixed z-50 overflow-hidden border-b-[0.25px] backdrop-blur-xl transition-all duration-700 hover:shadow-[0_0px_15px_rgba(0,202,255,0.5)]">
+      <header className="navbar fixed z-50 overflow-hidden border-b-[0.25px] border-b-secondary backdrop-blur-xl transition-all duration-700 hover:shadow-[0_0px_15px_rgba(0,202,255,0.5)]">
         <div className="mx-auto flex w-full max-w-7xl justify-between px-3 md:px-8">
           <div>
             <Link href="/">
@@ -79,7 +79,7 @@ export const Header = () => {
       <nav className="md:hidden">
         {/* The menu tag is the same as ul, just a bit more semantic in the context of navbars */}
         <menu
-          className={`menu menu-vertical border-secondary border-opacity fixed right-0 top-20 z-50 w-fit space-y-4 rounded-xl border p-4 backdrop-blur-xl transition duration-700 ease-in-out${menuOpen ? 'mr-4' : 'translate-x-full md:translate-x-0'}`}
+          className={`border-opacity menu menu-vertical fixed right-0 top-20 z-50 w-fit space-y-4 rounded-xl border border-secondary p-4 backdrop-blur-xl transition duration-700 ease-in-out${menuOpen ? 'mr-4' : 'translate-x-full md:translate-x-0'}`}
         >
           <NavigationLinks onCloseMenu={() => setMenuOpen(false)} />
         </menu>
