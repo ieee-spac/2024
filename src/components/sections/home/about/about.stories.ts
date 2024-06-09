@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { About } from './about';
 
 const meta = {
-  title: 'Website/About',
+  title: 'Website/Sections/About',
   component: About,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ['autodocs'],

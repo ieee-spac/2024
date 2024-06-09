@@ -10,13 +10,13 @@ export const HamburgerButton = ({
   const renderLine = (style: string) => (
     <hr
       aria-hidden="true"
-      className={`absolute block h-0.5 w-5 bg-current transition duration-500 ease-in-out${style}`}
+      className={`absolute block h-0.5 w-5 bg-current transition duration-500 ease-in-out ${style}`}
     />
   );
 
   return (
     <button
-      className="relative size-10 scale-150 text-secondary-content focus:outline-secondary md:hidden"
+      className=" relative size-10 scale-150 text-secondary-content focus:outline-secondary md:hidden"
       onClick={() => setMenuOpen(!menuOpen)}
       aria-expanded={menuOpen}
     >

@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Footer } from './footer';
 
 const meta = {
-  title: 'Website/Footer',
+  title: 'Website/Layout/Footer',
   component: Footer,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ['autodocs'],

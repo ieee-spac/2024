@@ -81,7 +81,7 @@ export const Header = () => {
       <nav className="md:hidden">
         {/* The menu tag is the same as ul, just a bit more semantic in the context of navbars */}
         <menu
-          className={`border-opacity menu menu-vertical fixed right-0 top-20 z-50 w-fit space-y-4 rounded-xl border border-secondary p-4 backdrop-blur-xl transition duration-700 ease-in-out${menuOpen ? 'mr-4' : 'translate-x-full md:translate-x-0'}`}
+          className={`border-opacity menu menu-vertical fixed right-0 top-20 z-50 w-fit space-y-4 rounded-xl border border-secondary p-4 backdrop-blur-xl transition duration-700 ease-in-out ${menuOpen ? 'mr-4' : 'translate-x-full md:translate-x-0'}`}
         >
           <NavigationLinks onCloseMenu={() => setMenuOpen(false)} />
         </menu>
