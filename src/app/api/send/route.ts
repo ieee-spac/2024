@@ -8,7 +8,7 @@ import { EmailTemplate } from '@/components/templates/email-template';
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 // Define email addresses
-const TEAM_EMAIL = 'webmaster@ieeespac.ca';
+const TEAM_EMAIL = 'lead@ieeespac.ca';
 const FORM_SUBMISSION_EMAIL = 'formsubmission@ieeespac.ca';
 
 export async function POST(request: Request) {
