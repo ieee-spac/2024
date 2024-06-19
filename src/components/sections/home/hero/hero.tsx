@@ -40,7 +40,11 @@ export const Hero = () => {
         </div>
 
         {/* Button(s) */}
-        <a href="mailto:patronage@ieeespac.ca?subject=SPAC 2024 Sponsorship Information Request&cc=lead@ieeespac.ca">
+        <a
+          href="https://drive.google.com/file/d/1wfvpv5T8Xg-cmt5kmps9Gzlddq9_Cdc0/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <button className="btn btn-outline btn-accent btn-wide text-lg uppercase group-hover:shadow-[0_0px_10px_rgba(255,209,0,1)] md:text-xl">
             Become a Patron
           </button>
