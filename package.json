@@ -1,6 +1,10 @@
 {
   "name": "2024-ieee-spac-website",
   "version": "0.1.0",
+  "author": {
+    "name": "Mumtahin Farabi",
+    "url": "https://github.com/mfarabi619"
+  },
   "private": true,
   "type": "module",
   "scripts": {
@@ -39,6 +43,7 @@
     "react-countup": "^6.5.3",
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.52.1",
+    "react-pdf": "^9.1.0",
     "resend": "^3.4.0",
     "sharp": "^0.33.4",
     "tailwind-merge": "^2.4.0",
@@ -147,9 +152,5 @@
       "@semantic-release/git",
       "@semantic-release/github"
     ]
-  },
-  "author": {
-    "name": "Mumtahin Farabi",
-    "url": "https://github.com/mfarabi619"
   }
 }

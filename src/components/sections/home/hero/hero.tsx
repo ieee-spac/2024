@@ -1,6 +1,7 @@
 /* eslint-disable react/button-has-type */
 import Image from 'next/image';
 
+import { SponsorshipPackage } from '@/components/sections/home/hero/sponsorship-package';
 import logo from '@/public/assets/spac_logo_year_stars.svg';
 
 export const Hero = () => {
@@ -31,7 +32,7 @@ export const Hero = () => {
             IEEE Student Professional Awareness Conference
           </p>
           <p className="text-xs md:text-xl">
-            November 1<sup>st</sup> |
+            November 1<sup>st</sup> |{' '}
             <a
               href="https://maps.app.goo.gl/wk5vdFH7StaCvsJf7"
               target="_blank"
@@ -41,17 +42,7 @@ export const Hero = () => {
             </a>
           </p>
         </div>
-
-        {/* Button(s) */}
-        <a
-          href="https://drive.google.com/file/d/1wfvpv5T8Xg-cmt5kmps9Gzlddq9_Cdc0/view?usp=sharing"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <button className="btn btn-outline btn-accent btn-wide text-lg uppercase group-hover:shadow-[0_0px_10px_rgba(255,209,0,1)] md:text-xl">
-            Become a Patron
-          </button>
-        </a>
+        <SponsorshipPackage />
       </main>
     </div>
   );
