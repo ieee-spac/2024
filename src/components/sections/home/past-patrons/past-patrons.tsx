@@ -2,6 +2,7 @@
 import type { StaticImageData } from 'next/image';
 import Image from 'next/image';
 
+import { SponsorshipPackage } from '@/components/sections/home/hero/sponsorship-package';
 import { Spotlight } from '@/components/ui/spotlight/spotlight';
 import ciena_logo from '@/public/assets/ciena_logo.svg';
 import drdc_canada_logo from '@/public/assets/drdc_canada_logo.svg';
@@ -151,16 +152,9 @@ export const PastPatrons = () => {
         logos={patronsData.silver}
         gradientClass="from-primary via-secondary to-black"
       />
-      {/* Button(s) */}
-      <a
-        href="https://drive.google.com/file/d/1wfvpv5T8Xg-cmt5kmps9Gzlddq9_Cdc0/view?usp=sharing"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <button className="btn btn-outline btn-accent btn-lg w-full text-lg uppercase hover:shadow-[0_0px_10px_rgba(255,209,0,1)] md:text-xl">
-          Become a Patron
-        </button>
-      </a>
+      <span className="inline-flex w-full justify-center">
+        <SponsorshipPackage />
+      </span>
     </div>
   );
 };
