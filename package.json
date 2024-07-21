@@ -1,0 +1,34 @@
+{
+  "name": "2024-ieee-spac-website",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SPAC-2024/2024-ieee-spac-website.git"
+  },
+  "homepage": "ieeespac.ca",
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "^14.2.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/mdx": "^2.0.13",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "autoprefixer": "^10.4.19",
+    "fumadocs-core": "12.5.4",
+    "fumadocs-docgen": "^1.1.0",
+    "fumadocs-mdx": "8.2.34",
+    "fumadocs-ui": "12.5.4",
+    "lucide-react": "^0.412.0",
+    "postcss": "^8.4.39",
+    "tailwindcss": "^3.4.6",
+    "typescript": "^5.5.3"
+  }
+}
