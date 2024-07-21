@@ -1,6 +1,6 @@
 /* eslint-disable func-names */
 /* eslint-disable import/no-extraneous-dependencies */
-import daisyui from 'daisyui';
+// import daisyui from 'daisyui';
 import svgToDataUri from 'mini-svg-data-uri';
 import type { Config } from 'tailwindcss';
 
@@ -72,7 +72,7 @@ export default {
     ],
   },
   plugins: [
-    daisyui,
+    // daisyui,
     addVariablesForColors,
     function ({ matchUtilities, theme }: any) {
       matchUtilities(
