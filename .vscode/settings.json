@@ -2,13 +2,13 @@
   "@comment1": "Disable the default formatter, use eslint instead",
   "prettier.enable": false,
   "editor.formatOnSave": false,
- 
+
   "@comment2": "Autofix",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
     "source.organizeImports": "never"
   },
- 
+
   "@comment3": "Silent the stylistic rules in your IDE, but still auto fix them",
   "eslint.rules.customizations": [
     { "rule": "style/*", "severity": "off" },
@@ -22,7 +22,7 @@
     { "rule": "*quotes", "severity": "off" },
     { "rule": "*semi", "severity": "off" }
   ],
- 
+
   "@comment4": "Enable ESlint for all supported languages",
   "eslint.validate": [
     "javascript",

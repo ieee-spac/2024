@@ -1,12 +1,12 @@
 {
   "name": "2024-ieee-spac-website",
   "version": "0.0.0",
+  "private": true,
+  "homepage": "ieeespac.ca",
   "repository": {
     "type": "git",
     "url": "https://github.com/SPAC-2024/2024-ieee-spac-website.git"
   },
-  "homepage": "ieeespac.ca",
-  "private": true,
   "scripts": {
     "build": "next build",
     "dev": "next dev",

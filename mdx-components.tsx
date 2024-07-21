@@ -1,9 +1,9 @@
-import type { MDXComponents } from 'mdx/types';
-import defaultComponents from 'fumadocs-ui/mdx';
+import type { MDXComponents } from 'mdx/types'
+import defaultComponents from 'fumadocs-ui/mdx'
 import type { ReactNode } from 'react'
 import { Tab, Tabs } from 'fumadocs-ui/components/tabs'
 import { Step, Steps } from 'fumadocs-ui/components/steps'
- import { IndexPageCards } from '@/components/mdx/index-page-cards'
+import { IndexPageCards } from '@/components/mdx/index-page-cards'
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
@@ -25,5 +25,5 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         {children}
       </Tabs>
     ),
-  };
+  }
 }

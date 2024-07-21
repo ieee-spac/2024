@@ -1,10 +1,10 @@
-import { map } from '@root/.map';
-import { createMDXSource } from 'fumadocs-mdx';
-import { loader } from 'fumadocs-core/source';
+import { map } from '@root/.map'
+import { createMDXSource } from 'fumadocs-mdx'
+import { loader } from 'fumadocs-core/source'
 import { createElement } from 'react'
 import {
   Dock as HomeIcon,
-  icons
+  icons,
 } from 'lucide-react'
 
 export const pages = [
@@ -30,4 +30,4 @@ export const { getPage, getPages, pageTree } = loader({
   },
 
   source: createMDXSource(map),
-});
+})

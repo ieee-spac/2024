@@ -1,9 +1,9 @@
 import type { Config } from 'tailwindcss'
-import { createPreset } from 'fumadocs-ui/tailwind-plugin';
+import { createPreset } from 'fumadocs-ui/tailwind-plugin'
 
 const config: Config = {
-  darkMode: ["class"],
-  prefix: "",
+  darkMode: ['class'],
+  prefix: '',
   content: [
     './src/app/docs/**/*.{ts,tsx}',
     './src/content/**/*.{md,mdx}',
@@ -17,8 +17,8 @@ const config: Config = {
     // preset: 'purple',
     preset: 'ocean',
     // preset: 'catppuccin',
-  }
+  },
   )],
 }
 
-export default config;
+export default config

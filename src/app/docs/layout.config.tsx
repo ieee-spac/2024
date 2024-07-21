@@ -1,4 +1,4 @@
-import { BaseLayoutProps, type DocsLayoutProps } from 'fumadocs-ui/layout';
+import type { BaseLayoutProps, DocsLayoutProps } from 'fumadocs-ui/layout'
 import { RootToggle } from 'fumadocs-ui/components/layout/root-toggle'
 import { House } from 'lucide-react'
 import { pageTree, pages } from '@/app/docs/source'
@@ -11,7 +11,7 @@ export const baseOptions: BaseLayoutProps = {
         <span className="text-lg font-bold">IEEE SPAC Dev Docs</span>
       </>
     ),
-    url: '/docs'
+    url: '/docs',
   },
   githubUrl: 'https://github.com/SPAC-2024/2024-ieee-spac-website',
   links: [
@@ -22,7 +22,7 @@ export const baseOptions: BaseLayoutProps = {
       active: 'nested-url',
     },
   ],
-};
+}
 
 // home layout configuration
 export const homeOptions: BaseLayoutProps = {
@@ -53,4 +53,4 @@ export const docsOptions: DocsLayoutProps = {
     ),
   },
   tree: pageTree,
-};
+}

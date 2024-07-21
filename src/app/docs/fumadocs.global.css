@@ -31,27 +31,27 @@
 /*}*/
 
 /*Title bar*/
-#nd-sidebar>div:first-child>div:first-child {
+#nd-sidebar > div:first-child > div:first-child {
   @apply md:hidden;
 }
 
 /*Root toggle*/
-#nd-sidebar>div:first-child>button {
+#nd-sidebar > div:first-child > button {
   @apply border-b;
 }
 
 /*Search bar*/
-#nd-sidebar>div:first-child>button:last-child {
+#nd-sidebar > div:first-child > button:last-child {
   @apply md:hidden;
 }
 
 /*Make the theme toggle button invisible on desktop screens, as the header already has a theme toggle button*/
-#nd-sidebar>div:nth-child(3)>[aria-label='Toggle Theme'] {
+#nd-sidebar > div:nth-child(3) > [aria-label='Toggle Theme'] {
   @apply md:invisible;
 }
 
 /*The Table of Contents also faces the same issue as the sidebar when desktop header is visible. Apply similar fixes*/
-#nd-docs-layout>div:last-child {
+#nd-docs-layout > div:last-child {
   @apply md:sticky md:top-16 md:h-[calc(100vh-4rem)] md:pt-8;
 }
 
