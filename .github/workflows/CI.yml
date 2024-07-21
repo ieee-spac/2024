@@ -2,79 +2,75 @@ name: CI
 
 on:
   push:
-    branches: [main]
+    branches: '*'
   pull_request:
-    branches: [main]
+    branches: '*'
 
 jobs:
-  build:
+  release:
+    runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [20.x, 22.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
-    name: Build with ${{ matrix.node-version }}
-    runs-on: ubuntu-latest
+        node-version: [20]
 
     steps:
-      - uses: actions/checkout@v3
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+      - name: 🛎️ Checkout Code
+        uses: actions/checkout@v4
         with:
-          node-version: ${{ matrix.node-version }}
-          cache: 'npm'
-      - run: npm ci
-      - run: npm run build
+          fetch-depth: 0 # All history for branches and tags
 
-  # test:
-  #   strategy:
-  #     matrix:
-  #       node-version: [20.x]
+      - name: 📦 Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
 
-    # name: Run all tests
-    # runs-on: ubuntu-latest
-    #
-    # steps:
-    #   - uses: actions/checkout@v3
-    #     with:
-    #       fetch-depth: 0 # Retrieve Git history, needed to verify commits
-    #   - name: Use Node.js ${{ matrix.node-version }}
-    #     uses: actions/setup-node@v3
-    #     with:
-    #       node-version: ${{ matrix.node-version }}
-    #       cache: 'npm'
-    #   - run: npm ci
-    #
-    #   - name: Build Next.js for E2E tests
-    #     run: npm run build
-    #
-    #   - if: github.event_name == 'pull_request'
-    #     name: Validate all commits from PR
-    #     run: npx commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
-    #
-    #   - name: Linter
-    #     run: npm run lint
-    #
-    #   - name: Type checking
-    #     run: npm run check-types
+      - name: 🛠️ Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: '${{ matrix.node-version }}'
+          cache: pnpm
 
-      # - name: Run unit tests
-      #   run: npm run test
+      - name: 📂 Install Dependencies
+        run: pnpm i
 
-      # - name: Upload coverage reports to Codecov
-      #   uses: codecov/codecov-action@v3
+      - name: 🧐 Check Code Quality
+        run: pnpm lint
+
+      # - name: 🎭 Install Playwright
+      #   run: pnpm i playwright http-server wait-on; npx playwright install --with-deps
+
+      # - name: 📔 Build Storybook
+      #   run: pnpm build-storybook --quiet
+
+      # - name: 🧪 Serve Storybook and run tests
+      #   run: |
+      #     pnpx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
+      #       "pnpm exec http-server storybook-static --port 6006 --silent" \
+      #       "pnpm exec wait-on tcp:6006 && pnpm test-storybook"
+
+      # - name: 🔬 Run Unit Tests
+      #   run: pnpm jest ...
+
+      # - name: 🔍 Run Integration Tests
+      #   run: pnpm jest ...
+
+      # - name: ⌚ 💀 Run E2E Tests
+      #   run: pnpx playwright test
+
+      # - name: 👀 Run Visual Tests
       #   env:
-      #     CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+      #     CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+      #   run: pnpm run chromatic
 
-      # - name: Install Playwright (used for Storybook and E2E tests)
-      #   run: npx playwright install --with-deps
+      - name: 🏗️ Build Project
+        # env:
+        #   SANITY_API_READ_TOKEN: ${{ secrets.SANITY_API_READ_TOKEN }}
+        run: pnpm build:all
 
-      # - name: Run storybook tests
-      #   run: npm run test-storybook:ci
-      #
-      # - uses: actions/upload-artifact@v3
-      #   if: always()
-      #   with:
-      #     name: test-results
-      #     path: test-results/
-      #     retention-days: 7
+      - name: 🤖 Run Semantic Release
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: pnpm exec semantic-release
+
+      - name: 💰 Profit
+        run: echo 🐞
