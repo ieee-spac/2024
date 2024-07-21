@@ -3,7 +3,7 @@ import type { StaticImageData } from 'next/image';
 import Image from 'next/image';
 
 import { SponsorshipPackage } from '@/components/sections/home/hero/sponsorship-package';
-import { Spotlight } from '@/components/ui/spotlight/spotlight';
+import { Spotlight } from '@/components/twilight/spotlight/spotlight';
 import ciena_logo from '@/public/assets/ciena_logo.svg';
 import drdc_canada_logo from '@/public/assets/drdc_canada_logo.svg';
 import fdm_logo from '@/public/assets/fdm_logo.svg';

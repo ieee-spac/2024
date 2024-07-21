@@ -6,7 +6,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
-import { HamburgerButton } from '@/components/ui/hamburger-button/hamburger-button';
+import { Button } from '@/components/shadcn/ui/button/button';
+import { HamburgerButton } from '@/components/twilight/hamburger-button/hamburger-button';
 import Logo from '@/public/assets/ieee_spac_logo_vertical_no_year.svg';
 
 const links = [
@@ -23,12 +24,7 @@ const NavigationLinks = ({ onCloseMenu }: { onCloseMenu: () => void }) => (
   <>
     {links.map((link) => (
       <Link key={link.name} href={link.path} scroll>
-        <button
-          className="btn btn-outline btn-primary btn-lg btn-block bg-black/[0.25] uppercase md:btn-ghost md:bg-black/[0.25]"
-          onClick={onCloseMenu}
-        >
-          {link.name}
-        </button>
+        <Button onClick={onCloseMenu}>{link.name}</Button>
       </Link>
     ))}
   </>
@@ -54,7 +50,7 @@ export const Header = () => {
   return (
     <>
       {/* Top Header */}
-      <header className="navbar fixed z-50 overflow-hidden border-b-[0.25px] border-b-secondary backdrop-blur-xl transition-all duration-700 hover:shadow-[0_0px_15px_rgba(0,202,255,0.5)]">
+      <header className="fixed z-50 w-full overflow-hidden border-b-[0.25px] border-b-secondary backdrop-blur-xl transition-all duration-700 hover:shadow-[0_0px_15px_rgba(0,202,255,0.5)]">
         <div className="mx-auto flex w-full max-w-7xl justify-between px-3 md:px-8">
           <div>
             <Link href="/">

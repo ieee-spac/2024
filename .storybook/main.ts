@@ -1,7 +1,6 @@
+import path from 'node:path';
+import type { StorybookConfig } from '@storybook/nextjs';
 
-import path from 'node:path'
-import type { StorybookConfig } from '@storybook/nextjs'
- 
 const config: StorybookConfig = {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
   framework: {
@@ -27,24 +26,25 @@ const config: StorybookConfig = {
     '@storybook/addon-themes',
     // Portrait. Toggle only Preview Background. Not affected by other two, use to 'lock' the background.
     '@storybook/addon-backgrounds',
-    // Person inside circle icon. Also 'Accessibility' tab to action bar
-    '@storybook/addon-a11y',
- 
+
     // --------------- Action Bar ---------------
     // https://storybook.js.org/docs/essentials/controls
     '@storybook/addon-controls',
-    // Accessibility tab added by '@storybook/addon-a11y'
+    // Actually has amazing docs for once: https://storybookjs.github.io/addon-designs/?path=/docs/docs-quick-start--docs
     {
-      name: '@storybook/addon-designs', // Actually has amazing docs for once: https://storybookjs.github.io/addon-designs/?path=/docs/docs-quick-start--docs
+      name: '@storybook/addon-designs',
       options: {
         // renderTarget: 'canvas' | 'tab'
       },
     },
-    // https://storybook.js.org/docs/essentials/actions
     '@storybook/addon-actions',
     // https://storybook.js.org/docs/essentials/interactions
     '@storybook/addon-interactions', // Must be listed after @storybook/addon-actions or @storybook/addon-essentials
- 
+    // Accessibility tab added by '@storybook/addon-a11y'
+    // Person inside circle icon on Toolbar. Also 'Accessibility' tab to action bar
+    '@storybook/addon-a11y',
+    // https://storybook.js.org/docs/essentials/actions
+
     // '@chromatic-com/storybook',
     // Code for component story
     // {
@@ -63,7 +63,7 @@ const config: StorybookConfig = {
     //   },
     // },
     '@storybook/addon-links',
- 
+
     // --------------- No-icons ---------------
     // Onboarding flow
     // '@storybook/addon-onboarding',
@@ -90,15 +90,14 @@ const config: StorybookConfig = {
     '@whitespace/storybook-addon-html',
   ],
   webpackFinal: async (config) => {
-    if (!config.resolve)
-      return config
- 
+    if (!config.resolve) return config;
+
     config.resolve.alias = {
       ...config.resolve.alias,
       '@/': path.resolve(__dirname, '../src/'),
-    }
- 
-    return config
+    };
+
+    return config;
   },
-}
-export default config
+};
+export default config;

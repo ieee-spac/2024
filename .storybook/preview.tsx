@@ -1,4 +1,3 @@
-import '@/app/globals.css'
 
 import React from 'react'
 import type { Preview } from '@storybook/react'
@@ -13,6 +12,8 @@ import { DocsContainer, type DocsContextProps } from '@storybook/blocks'
 import { customViewports } from './custom-viewports'
 import { commonTheme, darkUIStorybook, lightUIStorybook } from './themes-storybook-ui'
  
+import '@/app/globals.css'
+
 const preview: Preview = {
   parameters: {
     layout: 'fullscreen',

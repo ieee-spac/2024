@@ -1,34 +1,76 @@
-/* eslint-disable func-names */
-/* eslint-disable import/no-extraneous-dependencies */
-// import daisyui from 'daisyui';
 import svgToDataUri from 'mini-svg-data-uri';
 import type { Config } from 'tailwindcss';
+// @ts-expect-error: This works and doesn't cause any issues
+import flattenColorPalette from 'tailwindcss/lib/util/flattenColorPalette';
+import tailwindcssAnimate from 'tailwindcss-animate';
 
-// const colors = require("tailwindcss/colors");
-
-const {
-  default: flattenColorPalette,
-} = require('tailwindcss/lib/util/flattenColorPalette');
-
-function addVariablesForColors({ addBase, theme }: any) {
-  const allColors = flattenColorPalette(theme('colors'));
-  const newVars = Object.fromEntries(
-    Object.entries(allColors).map(([key, val]) => [`--${key}`, val]),
-  );
-
-  addBase({
-    ':root': newVars,
-  });
-}
-
-export default {
-  content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
+const config = {
+  darkMode: ['class'],
+  content: [
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
+  ],
+  prefix: '',
   theme: {
+    container: {
+      center: true,
+      padding: '2rem',
+      screens: {
+        '2xl': '1400px',
+      },
+    },
     extend: {
-      animation: {
-        spotlight: 'spotlight 2s ease .75s 1 forwards',
+      colors: {
+        border: 'hsl(var(--border))',
+        input: 'hsl(var(--input))',
+        ring: 'hsl(var(--ring))',
+        background: 'hsl(var(--background))',
+        foreground: 'hsl(var(--foreground))',
+        primary: {
+          DEFAULT: 'hsl(var(--primary))',
+          foreground: 'hsl(var(--primary-foreground))',
+        },
+        secondary: {
+          DEFAULT: 'hsl(var(--secondary))',
+          foreground: 'hsl(var(--secondary-foreground))',
+        },
+        destructive: {
+          DEFAULT: 'hsl(var(--destructive))',
+          foreground: 'hsl(var(--destructive-foreground))',
+        },
+        muted: {
+          DEFAULT: 'hsl(var(--muted))',
+          foreground: 'hsl(var(--muted-foreground))',
+        },
+        accent: {
+          DEFAULT: 'hsl(var(--accent))',
+          foreground: 'hsl(var(--accent-foreground))',
+        },
+        popover: {
+          DEFAULT: 'hsl(var(--popover))',
+          foreground: 'hsl(var(--popover-foreground))',
+        },
+        card: {
+          DEFAULT: 'hsl(var(--card))',
+          foreground: 'hsl(var(--card-foreground))',
+        },
+      },
+      borderRadius: {
+        lg: 'var(--radius)',
+        md: 'calc(var(--radius) - 2px)',
+        sm: 'calc(var(--radius) - 4px)',
       },
       keyframes: {
+        'accordion-down': {
+          from: { height: '0' },
+          to: { height: 'var(--radix-accordion-content-height)' },
+        },
+        'accordion-up': {
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: '0' },
+        },
         spotlight: {
           '0%': {
             opacity: '0',
@@ -40,39 +82,15 @@ export default {
           },
         },
       },
+      animation: {
+        'accordion-down': 'accordion-down 0.2s ease-out',
+        'accordion-up': 'accordion-up 0.2s ease-out',
+        spotlight: 'spotlight 2s ease .75s 1 forwards',
+      },
     },
   },
-  daisyui: {
-    themes: [
-      {
-        mytheme: {
-          primary: '#00A3E0',
-          'primary-content': '#000a12',
-          secondary: '#00629b',
-          'secondary-content': '#d0dfec',
-          accent: '#FFD100',
-          'accent-content': '#161000',
-          neutral: '#00843d',
-          'neutral-content': '#d3e6d7',
-          // "base-100": "#002855",
-          'base-100': '#000000',
-          'base-200': '#002149',
-          'base-300': '#001b3d',
-          'base-content': '#c8d1dc',
-          info: '#009CA6',
-          'info-content': '#00090a',
-          success: '#78be21',
-          'success-content': '#050d00',
-          warning: '#ffa400',
-          'warning-content': '#160a00',
-          error: '#BA0C2F',
-          'error-content': '#f8d4d3',
-        },
-      },
-    ],
-  },
   plugins: [
-    // daisyui,
+    tailwindcssAnimate,
     addVariablesForColors,
     function ({ matchUtilities, theme }: any) {
       matchUtilities(
@@ -101,3 +119,16 @@ export default {
     },
   ],
 } satisfies Config;
+
+function addVariablesForColors({ addBase, theme }: any) {
+  const allColors = flattenColorPalette(theme('colors'));
+  const newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val]),
+  );
+
+  addBase({
+    ':root': newVars,
+  });
+}
+
+export default config;
