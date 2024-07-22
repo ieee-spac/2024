@@ -79,6 +79,7 @@
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.8",
     "eslint-plugin-storybook": "0.8.0",
+    "framer-motion": "^11.3.8",
     "fumadocs-core": "12.5.4",
     "fumadocs-docgen": "^1.1.0",
     "fumadocs-mdx": "8.2.34",

@@ -23,7 +23,13 @@ function NavigationLinks({ onCloseMenu }: { onCloseMenu: () => void }) {
     <>
       {links.map(link => (
         <Link key={link.name} href={link.path} scroll>
-          <Button onClick={onCloseMenu}>{link.name}</Button>
+          <Button
+            size="lg"
+            className="text-primary shadow-sm hover:text-primary-foreground py-8 w-full bg-black/[0.25] border border-auxiliary md:border-hidden uppercase md:bg-black/[0.25] md:py-6 md:px-5 md:hover:scale-110 hover:bg-auxiliary group-hover:shadow-[0_0px_5px_rgba(0,202,255,1)]"
+            onClick={onCloseMenu}
+          >
+            {link.name}
+          </Button>
         </Link>
       ))}
     </>
@@ -50,8 +56,8 @@ export function Header() {
   return (
     <>
       {/* Top Header */}
-      <header className="fixed z-50 w-full overflow-hidden border-b-[0.25px] border-b-secondary backdrop-blur-xl transition-all duration-700 hover:shadow-[0_0px_15px_rgba(0,202,255,0.5)]">
-        <div className="mx-auto flex w-full max-w-7xl justify-between px-3 md:px-8">
+      <header className="group fixed py-3 z-50 w-full overflow-hidden border-b-[0.25px] border-b-auxiliary backdrop-blur-xl transition-all duration-700 hover:shadow-[0_0px_15px_rgba(0,202,255,0.5)]">
+        <div className="mx-auto flex w-full max-w-7xl justify-between items-center px-3 md:px-8">
           <div>
             <Link href="/">
               <Image
@@ -65,7 +71,7 @@ export function Header() {
           <div>
             <HamburgerButton menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
             <nav className="hidden md:block">
-              <menu className="menu menu-horizontal flex-nowrap bg-transparent md:space-x-4 ">
+              <menu className="flex flex-nowrap bg-transparent md:space-x-4 ">
                 <NavigationLinks onCloseMenu={() => setMenuOpen(false)} />
               </menu>
             </nav>
@@ -73,11 +79,10 @@ export function Header() {
         </div>
       </header>
 
-      {/* Navigation Menu for both Desktop and Mobile */}
+      {/* Navigation Menu for Mobile */}
       <nav className="md:hidden">
-        {/* The menu tag is the same as ul, just a bit more semantic in the context of navbars */}
         <menu
-          className={`border-opacity menu menu-vertical fixed right-0 top-20 z-50 w-fit space-y-4 rounded-xl border border-secondary p-4 backdrop-blur-xl transition duration-700 ease-in-out ${menuOpen ? 'mr-4' : 'translate-x-full md:translate-x-0'}`}
+          className={`flex flex-col fixed right-0 top-20 z-50 w-fit space-y-4 rounded-xl border border-card p-4 backdrop-blur-xl transition duration-700 ease-in-out ${menuOpen ? 'mr-4' : 'translate-x-full md:translate-x-0'}`}
         >
           <NavigationLinks onCloseMenu={() => setMenuOpen(false)} />
         </menu>

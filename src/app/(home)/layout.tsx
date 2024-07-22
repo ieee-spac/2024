@@ -23,8 +23,12 @@ export const viewport: Viewport = {
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={openSans.className} suppressHydrationWarning>
-      <body className="dark">
+    <html
+      lang="en"
+      className="dark scroll-pt-20 scroll-smooth md:scroll-pt-28"
+      suppressHydrationWarning
+    >
+      <body className={openSans.className}>
         {children}
       </body>
     </html>
