@@ -5,6 +5,7 @@ import 'react-pdf/dist/Page/AnnotationLayer.css'
 
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { Document, Page, pdfjs } from 'react-pdf'
+import ShinyButton from '@/components/twilight/shiny-button/shiny-button'
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   'pdfjs-dist/build/pdf.worker.min.mjs',
@@ -63,14 +64,11 @@ export function SponsorshipPackage() {
 
   return (
     <>
-      <button
-        type="button"
-        className="btn btn-outline btn-accent btn-wide text-lg uppercase group-hover:shadow-[0_0px_10px_rgba(255,209,0,1)] md:text-xl"
-        // onClick={() =>
-        //   document.getElementById('sponsorship-package-modal')?.showModal()}
-      >
-        Become a Patron
-      </button>
+      <ShinyButton
+        text="Become a Patron"
+        // eslint-disable-next-line no-console
+        onClick={() => console.log('clicked')}
+      />
 
       <dialog id="sponsorship-package-modal" className="modal">
         <div className="modal-box relative h-3/4 space-y-2 scroll-smooth px-0">

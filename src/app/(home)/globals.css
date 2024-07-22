@@ -36,6 +36,7 @@
     --card-foreground: 196 5% 10%;
     --popover: 196 100% 95%;
     --popover-foreground: 196 100% 0%;
+
     --primary: 196 100% 43.9%;
     --primary-foreground: 0 0% 100%;
     --auxiliary: 203, 100%, 37%;
@@ -55,6 +56,7 @@
     --success-foreground: 120, 100%, 2%;
     --warning: 38, 100%, 50%;
     --warning-foreground: 30, 100%, 5%;
+
     --secondary: 196 30% 70%;
     --secondary-foreground: 0 0% 0%;
     --muted: 158 30% 85%;
@@ -83,6 +85,25 @@
     --popover-foreground: 196 5% 90%;
     --primary: 196 100% 43.9%;
     --primary-foreground: 0 0% 100%;
+
+    --auxiliary: 203, 100%, 37%;
+    --auxiliary-foreground: 213, 13%, 91%;
+    --tertiary: 52, 100%, 50%;
+    --tertiary-foreground: 60, 4%, 9%;
+    --neutral: 143, 100%, 26%;
+    --neutral-foreground: 141, 13%, 85%;
+    /*// "base-100": "#002855",*/
+    /*'base-100': '#000000',*/
+    /*'base-200': '#002149',*/
+    /*'base-300': '#001b3d',*/
+    /*'base-content': '#c8d1dc',*/
+    --info: 183, 100%, 33%;
+    --info-foreground: 180, 100%, 3%;
+    --success: 83, 100%, 25%;
+    --success-foreground: 120, 100%, 2%;
+    --warning: 38, 100%, 50%;
+    --warning-foreground: 30, 100%, 5%;
+
     --secondary: 196 30% 10%;
     --secondary-foreground: 0 0% 100%;
     --muted: 158 30% 15%;
@@ -111,4 +132,39 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.backdrop-blur-xs {
+  @apply backdrop-blur-[2px];
+}
+
+@keyframes bobbing {
+  0%,
+  100% {
+    transform: translateY(-2px);
+  }
+
+  50% {
+    transform: translateY(2px);
+  }
+}
+
+.bobbing-animation-1 {
+  animation: bobbing 4s ease-in-out infinite;
+}
+
+.bobbing-animation-2 {
+  animation: bobbing 3.5s ease-in-out infinite;
+}
+
+.bobbing-animation-3 {
+  animation: bobbing 3s ease-in-out infinite;
+}
+
+.bobbing-animation-4 {
+  animation: bobbing 2.5s ease-in-out infinite;
+}
+
+.bobbing-animation-5 {
+  animation: bobbing 2s ease-in-out infinite;
 }
