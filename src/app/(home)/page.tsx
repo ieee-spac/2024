@@ -1,18 +1,19 @@
-import Link from 'next/link'
+import { Footer } from '@/components/layout/footer/footer'
+import { Header } from '@/components/layout/header/header'
+import { About } from '@/components/sections/home/about/about'
+import { Contact } from '@/components/sections/home/contact/contact'
+import { Hero } from '@/components/sections/home/hero/hero'
+import { PastPatrons } from '@/components/sections/home/past-patrons/past-patrons'
 
 export default function HomePage() {
   return (
-    <main className="flex h-screen flex-col justify-center text-center">
-      <h1 className="mb-4 text-2xl font-bold">Hello World</h1>
-      <p className="text-muted-foreground">
-        You can open
-        {' '}
-        <Link href="/docs" className="text-foreground font-semibold underline">
-          /docs
-        </Link>
-        {' '}
-        and see the documentation.
-      </p>
-    </main>
+    <>
+      <Header />
+      <Hero />
+      <About />
+      <PastPatrons />
+      <Contact />
+      <Footer />
+    </>
   )
 }
