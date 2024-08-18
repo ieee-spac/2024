@@ -23,7 +23,12 @@ const animationProps = {
   },
 } as AnimationProps
 
-function ShinyButton({ text = 'shiny-button', onClick }) {
+export function ShinyButton(
+  {
+    text = 'shiny-button',
+    onClick,
+  }: { text?: string, onClick?: () => void },
+) {
   return (
     <motion.button
       {...animationProps}
@@ -50,5 +55,3 @@ function ShinyButton({ text = 'shiny-button', onClick }) {
     </motion.button>
   )
 }
-
-export default ShinyButton

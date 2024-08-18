@@ -10,7 +10,8 @@ import public_service_commission_of_canada_logo from '@root/public/assets/public
 import ross_video_logo from '@root/public/assets/ross_video_logo.svg'
 import uber_logo from '@root/public/assets/uber_logo.svg'
 import { Spotlight } from '@/components/twilight/spotlight/spotlight'
-import { SponsorshipPackage } from '@/components/sections/home/hero/sponsorship-package'
+// import { SponsorshipPackage } from '@/components/sections/home/hero/sponsorship-package'
+import { ShinyButton } from '@/components/twilight/shiny-button/shiny-button'
 
 // Logo and Tier types
 interface Logo {
@@ -154,7 +155,16 @@ export function PastPatrons() {
         gradientClass="from-primary via-secondary to-black"
       />
       <span className="inline-flex w-full justify-center">
-        <SponsorshipPackage />
+        {/* <SponsorshipPackage /> */}
+        <a
+          href="https://drive.google.com/file/d/1wfvpv5T8Xg-cmt5kmps9Gzlddq9_Cdc0/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <ShinyButton
+            text="Become a Patron"
+          />
+        </a>
       </span>
     </div>
   )

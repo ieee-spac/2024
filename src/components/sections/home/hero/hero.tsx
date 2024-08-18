@@ -1,7 +1,8 @@
 import Image from 'next/image'
 
 import logo from '@root/public/assets/spac_logo_year_stars.svg'
-import { SponsorshipPackage } from '@/components/sections/home/hero/sponsorship-package'
+// import { SponsorshipPackage } from '@/components/sections/home/hero/sponsorship-package'
+import { ShinyButton } from '@/components/twilight/shiny-button/shiny-button'
 import { BorderBeam } from '@/components/twilight/border-beam/border-beam'
 import SparklesText from '@/components/twilight/sparkles-text/sparkles-text'
 import ShineBorder from '@/components/twilight/shine-pulse/shine-pulse'
@@ -64,7 +65,16 @@ export function Hero() {
               </div>
             )}
           />
-          <SponsorshipPackage />
+          {/* <SponsorshipPackage /> */}
+          <a
+            href="https://drive.google.com/file/d/1wfvpv5T8Xg-cmt5kmps9Gzlddq9_Cdc0/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <ShinyButton
+              text="Become a Patron"
+            />
+          </a>
         </main>
       </ShineBorder>
     </div>
