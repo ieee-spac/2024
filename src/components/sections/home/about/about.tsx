@@ -102,13 +102,13 @@ export function About() {
         <h2 className="text-5xl font-bold text-primary sm:text-6xl">
           About Us
         </h2>
-        <p className="text-base-content">
+        <p>
           The IEEE Student Professional Awareness Conference (SPAC) is a formal
           networking event & dinner that serves esteemed professionals and
           allows them to engage with engineering and computer science students
           within their fields.
         </p>
-        <p className="text-base-content">
+        <p>
           SPAC provides students, academics, and industry professionals an
           opportunity to network and bridge the gap between classrooms and
           boardrooms, thereby empowering attendees to build professional
@@ -117,7 +117,7 @@ export function About() {
 
         {/* Colour Bubbles */}
         <div className="grid h-[38vw] max-h-56 grid-flow-col justify-center">
-          <div className="bobbing-animation-1 flex aspect-square h-full items-center justify-center rounded-full bg-accent text-center text-accent-content sm:-mr-1">
+          <div className="bobbing-animation-1 flex aspect-square h-full items-center justify-center rounded-full bg-tertiary text-center text-tertiary-foreground sm:-mr-1">
             <div>
               <h4 className="text-5xl font-bold min-[375px]:text-6xl min-[425px]:text-7xl sm:text-8xl">
                 <CountUp end={100} duration={3} enableScrollSpy scrollSpyOnce />
@@ -127,7 +127,7 @@ export function About() {
               </p>
             </div>
           </div>
-          <div className="bobbing-animation-4 -mr-4 flex aspect-square h-[49%] items-center justify-center self-end rounded-full bg-neutral text-center text-neutral-content sm:-mr-8">
+          <div className="bobbing-animation-4 -mr-4 flex aspect-square h-[49%] items-center justify-center self-end rounded-full bg-neutral text-center sm:-mr-8">
             <div>
               <h4 className="text-xl font-bold min-[375px]:text-3xl min-[425px]:text-4xl sm:text-5xl">
                 <CountUp end={200} duration={3} enableScrollSpy scrollSpyOnce />
@@ -137,7 +137,7 @@ export function About() {
               </p>
             </div>
           </div>
-          <div className="bobbing-animation-2 -mr-3 flex aspect-square h-[65%] items-center justify-center self-start rounded-full bg-warning text-center text-warning-content sm:-mr-5">
+          <div className="bobbing-animation-2 -mr-3 flex aspect-square h-[65%] items-center justify-center self-start rounded-full bg-warning text-center text-warning-foreground sm:-mr-5">
             <div>
               <h4 className="text-4xl font-bold min-[425px]:text-5xl sm:text-6xl">
                 <CountUp end={9} duration={3} enableScrollSpy scrollSpyOnce />
@@ -147,7 +147,7 @@ export function About() {
               </p>
             </div>
           </div>
-          <div className="bobbing-animation-3 flex aspect-square h-[59%] items-center justify-center self-end rounded-full bg-secondary text-center text-secondary-content">
+          <div className="bobbing-animation-3 flex aspect-square h-[59%] items-center justify-center self-end rounded-full bg-auxiliary text-center text-auxiliary-content">
             <div>
               <h4 className="text-3xl font-bold min-[375px]:text-4xl min-[425px]:text-5xl sm:text-6xl">
                 <CountUp end={300} duration={3} enableScrollSpy scrollSpyOnce />
