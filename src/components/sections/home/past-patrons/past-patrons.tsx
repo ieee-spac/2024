@@ -144,7 +144,7 @@ export function PastPatrons() {
       />
       <LogoSection
         title="Gold"
-        titleColor="text-accent"
+        titleColor="text-tertiary"
         logos={patronsData.gold}
         gradientClass="from-accent via-secondary to-black"
       />
