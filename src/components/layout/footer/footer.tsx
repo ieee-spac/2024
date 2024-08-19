@@ -6,7 +6,8 @@ import ieee_spac_logo_combined_horizontal from '@root/public/assets/ieee_spac_lo
 export function Footer() {
   return (
     <footer className="border-t-[0.25px] border-secondary text-neutral-content transition-all duration-700 hover:shadow-[0_0px_15px_rgba(0,202,255,0.5)]">
-      <footer className="footer mx-auto  w-full max-w-7xl items-center px-3 py-4 md:px-8">
+      <div className="flex justify-between mx-auto w-full max-w-7xl items-center px-3 py-4 md:px-8">
+        {/* SPAC LOGO */}
         <aside className="grid-flow-col items-center">
           <Link href="/">
             <Image
@@ -18,9 +19,9 @@ export function Footer() {
           <p>Copyright © 2024 IEEE - All right reserved.</p>
         </aside>
 
-        {/* Social Media Icons */}
-        <nav className="w-full grid-flow-col justify-center gap-4 md:w-fit md:place-self-center md:justify-self-end">
-          {/* Instagram Logo */}
+        {/* SOCIAL MEDIA ICONS */}
+        <nav className="flex grid-flow-col justify-center gap-4 md:w-fit md:place-self-center md:justify-self-end">
+          {/* INSTAGRAM LOGO */}
           <a
             aria-label="Instagram Link"
             href="https://www.instagram.com/ieeespac/?hl=en"
@@ -39,7 +40,7 @@ export function Footer() {
             </svg>
           </a>
 
-          {/* Facebook Logo */}
+          {/* FACEBOOK LOGO */}
           <a
             aria-label="Facebook Link"
             href="https://www.facebook.com/ieeespacottawa/"
@@ -58,7 +59,7 @@ export function Footer() {
             </svg>
           </a>
         </nav>
-      </footer>
+      </div>
     </footer>
   )
 }
