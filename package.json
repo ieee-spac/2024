@@ -5,7 +5,7 @@
   "homepage": "ieeespac.ca",
   "repository": {
     "type": "git",
-    "url": "https://github.com/SPAC-2024/2024-ieee-spac-website.git"
+    "url": "https://github.com/ieee-spac/2024.git"
   },
   "scripts": {
     "build": "next build",
