@@ -18,10 +18,17 @@ const config: Config = {
       center: true,
       padding: '2rem',
       screens: {
+        '2xs': '320px',
+        'xs': '375px',
         '2xl': '1400px',
       },
     },
     extend: {
+      screens: {
+        '3xs': '320px',
+        '2xs': '375px',
+        'xs': '425px',
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
