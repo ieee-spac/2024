@@ -7,6 +7,8 @@ import { pageTree, pages } from '@/app/docs/source'
 export const baseOptions: BaseLayoutProps = {
   nav: {
     title: (
+      // Doesn't work without the fragment
+      // eslint-disable-next-line react/no-useless-fragment
       <>
         <span className="text-lg font-bold">IEEE SPAC Dev Docs</span>
       </>
