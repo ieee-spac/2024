@@ -56,7 +56,7 @@ export function Contact() {
     },
   })
 
-  const [isSubmitting, setIsSubmitting] = useState(false) // Add this state variable
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     setIsSubmitting(true)
@@ -170,6 +170,7 @@ export function Contact() {
             variant="outline"
             size="lg"
             onClick={() => form.handleSubmit(onSubmit)()}
+            disabled={isSubmitting}
           >
             {isSubmitting ? <Loader2 className="animate-spin mr-2 size-4" /> : <EnvelopeOpenIcon className="mr-2 size-4" />}
             {isSubmitting ? 'Sending...' : 'Submit'}
