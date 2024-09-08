@@ -5,7 +5,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Open_Sans } from 'next/font/google'
 import type { Metadata, Viewport } from 'next'
 
-import './globals.css'
+import '@/app/(home)/globals.css'
 
 const openSans = Open_Sans({ subsets: ['latin'] })
 
@@ -30,6 +30,7 @@ export default function Layout({ children }: { children: ReactNode }) {
     >
       <body className={openSans.className}>
         {children}
+        <Analytics />
       </body>
     </html>
   )
