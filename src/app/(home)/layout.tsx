@@ -31,6 +31,7 @@ export default function Layout({ children }: { children: ReactNode }) {
       <body className={openSans.className}>
         {children}
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )
