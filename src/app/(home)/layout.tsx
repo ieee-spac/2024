@@ -6,6 +6,7 @@ import { Open_Sans } from 'next/font/google'
 import type { Metadata, Viewport } from 'next'
 
 import '@/app/(home)/globals.css'
+import { Toaster } from '@/components/shadcn/ui/sonner/sonner'
 
 const openSans = Open_Sans({ subsets: ['latin'] })
 
@@ -30,6 +31,7 @@ export default function Layout({ children }: { children: ReactNode }) {
     >
       <body className={openSans.className}>
         {children}
+        <Toaster />
         <Analytics />
         <SpeedInsights />
       </body>

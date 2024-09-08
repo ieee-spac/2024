@@ -1,7 +1,3 @@
-// TODO: Remove these ESLint disables after Shadcn migration is complete
-/* eslint-disable no-alert */
-/* eslint-disable no-console */
-
 'use client'
 
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -10,6 +6,7 @@ import { useForm } from 'react-hook-form'
 import { EnvelopeOpenIcon } from '@radix-ui/react-icons'
 import { Loader2 } from 'lucide-react'
 import { useState } from 'react'
+import { toast } from 'sonner'
 import { Input } from '@/components/aceternity/input'
 import { Textarea } from '@/components/aceternity/text-area'
 import { Label as FormLabel } from '@/components/aceternity/label'
@@ -60,6 +57,9 @@ export function Contact() {
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     setIsSubmitting(true)
+    toast('✉️ Sending message...', {
+      description: `Please be patient and don\'t refresh the page, otherwise your email will be lost to the void.🙏`,
+    })
     try {
       const response = await fetch('/api/send', {
         method: 'POST',
@@ -69,18 +69,18 @@ export function Contact() {
         body: JSON.stringify(values),
       })
       const result = await response.json()
-      console.log(result)
       if (result.error) {
-        alert('Error sending message. Please try again.')
+        toast('Error sending message. Please try again.')
       }
       else {
-        alert('Message sent successfully!')
+        toast('🥳 Message sent successfully!', {
+          description: `Confirmation email has been sent to ${values.email}. ✅`,
+        })
         form.reset()
       }
     }
     catch (error) {
       console.error('Error:', error)
-      alert('Error sending message. Please try again.')
     }
     finally { setIsSubmitting(false) }
   }
