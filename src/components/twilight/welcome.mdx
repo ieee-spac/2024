@@ -1,0 +1,269 @@
+import { Meta } from "@storybook/blocks";
+import Image from "next/image";
+
+import spac_2024_figma_cover from "../../../public/assets/spac_2024_figma_cover.png";
+import twilight_design_system_cover from "../../../public/assets/twilight_design_system_cover.png";
+import spac_2024_figma_design_system_and_assets from "../../../public/assets/spac_2024_figma_design_system_and_assets.png";
+import aceternity_ui_website from "../../../public/assets/aceternity_ui_website.png";
+import magic_ui_website from "../../../public/assets/magic_ui_website.png";
+import tailwindcss_website from "../../../public/assets/tailwindcss_website.png";
+import shadcn_ui_website from "../../../public/assets/shadcn_ui_website.png";
+import spac_2024_github_org_readme from "../../../public/assets/spac_2024_github_org_readme.png";
+import spac_2024_github_repo_readme from "../../../public/assets/spac_2024_github_repo_readme.png";
+import spac_2024_project_board from "../../../public/assets/spac_2024_project_board.png";
+
+<Meta title="Welcome" />
+
+<div className="space-y-8 p-8">
+  <h1 className="text-3xl font-bold text-center">Welcome to the SPAC 2024 Platform Storybook</h1>
+  <hr/>
+
+<Image
+  src={spac_2024_figma_cover}
+  alt="SPAC 2024 Figma Cover"
+  className="w-full h-auto"
+/>
+
+<p className="inline">
+  Here you can find the design guidelines, component documentation, and
+  resources used for building the [SPAC 2024 Website](https://www.ieeespac.ca),
+  using our very own Twilight Design System.
+</p>
+
+<Image
+  src={twilight_design_system_cover}
+  alt="Twilight Design System Cover"
+  className="w-full h-auto"
+/>
+
+<h2 className="text-2xl font-semibold">What's included</h2>
+
+<table className="table-auto mx-auto">
+  <tr>
+    <th className="text-center font-semibold">Aceternity UI</th>
+    <th className="text-center font-semibold">Magic UI</th>
+  </tr>
+  <tr>
+    <td className="text-center p-4">
+      <a
+        href="https://ui.aceternity.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Image
+          src={aceternity_ui_website}
+          alt="Aceternity UI"
+          className="w-full h-auto"
+        />
+      </a>
+    </td>
+    <td className="text-center p-4">
+      <a
+        href="https://magicui.design/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Image
+          src={magic_ui_website}
+          alt="Magic UI"
+          className="w-full h-auto"
+        />
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <th className="text-center font-semibold">Shadcn UI</th>
+    <th className="text-center font-semibold">Tailwind CSS</th>
+  </tr>
+  <tr>
+    <td className="text-center p-4">
+      <a href="https://ui.shadcn.com" target="_blank" rel="noopener noreferrer">
+        <Image
+          src={shadcn_ui_website}
+          alt="Shadcn UI"
+          className="w-full h-auto"
+        />
+      </a>
+    </td>
+    <td className="text-center p-4">
+      <a
+        href="https://tailwindcss.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Image
+          src={tailwindcss_website}
+          alt="Tailwind CSS"
+          className="w-full h-auto"
+        />
+      </a>
+    </td>
+  </tr>
+</table>
+
+{" "}
+
+<h2 className="text-2xl font-semibold">Our Core Values</h2>
+<ul className="list-disc list-inside space-y-2">
+  <li>
+    <strong>Bright Future:</strong> Reflects optimism and innovation, focusing
+    on the promise of technology and engineering.
+  </li>
+  <li>
+    <strong>Youthful Energy:</strong> Vibrant and dynamic to resonate with the
+    enthusiasm of students and young professionals.
+  </li>
+  <li>
+    <strong>Accessibility:</strong> Ensuring inclusivity and ease of use for all
+    participants, including those with disabilities.
+  </li>
+</ul>
+
+{" "}
+
+<h2 className="text-2xl font-semibold">Resources</h2>
+
+{" "}
+
+<table className="table-auto mx-auto">
+  <tr>
+    <th className="text-center font-semibold">Figma</th>
+    <th className="text-center font-semibold">GitHub Repository</th>
+  </tr>
+  <tr>
+    <td className="text-center p-4">
+      <a
+        href="https://www.figma.com/community/file/1417704325784085062/ieee-spac-2024-twilight-design-system"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Image
+          src={spac_2024_figma_design_system_and_assets}
+          alt="Figma"
+          className="w-full h-auto"
+        />
+      </a>
+    </td>
+    <td className="text-center p-4">
+      <a
+        href="https://github.com/ieee-spac/2024"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Image
+          src={spac_2024_github_repo_readme}
+          alt="GitHub Repository"
+          className="w-full h-auto"
+        />
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <th className="text-center font-semibold">GitHub Organization</th>
+    <th className="text-center font-semibold">Project Board</th>
+  </tr>
+  <tr>
+    <td className="text-center p-4">
+      <a
+        href="https://github.com/ieee-spac"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Image
+          src={spac_2024_github_org_readme}
+          alt="GitHub Organization"
+          className="w-full h-auto"
+        />
+      </a>
+    </td>
+    <td className="text-center p-4">
+      <a
+        href="https://github.com/orgs/ieee-spac/projects/4"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Image
+          src={spac_2024_project_board}
+          alt="Project Board"
+          className="w-full h-auto"
+        />
+      </a>
+    </td>
+  </tr>
+</table>
+
+<h2 className="text-2xl font-semibold">Contributors</h2>
+
+  <table className="table-auto mx-auto w-full">
+    <tr>
+      <th className="text-center font-semibold">Aashna Verma</th>
+      <th className="text-center font-semibold">Mumtahin Farabi</th>
+    </tr>
+    <tr>
+      <td className="text-center p-4">
+        <Image
+          src="https://avatars.githubusercontent.com/u/43392946?v=4.png"
+          alt="Aashna Verma Picture"
+          width={100}
+          height={100}
+          className="rounded-full mx-auto"
+        />
+        <div className="flex justify-center space-x-4 mt-2">
+          <a href="https://www.linkedin.com/in/aashna-verma-000/" target="_blank" rel="noopener noreferrer">
+            <img
+              src="https://img.icons8.com/fluency/48/000000/linkedin.png"
+              alt="LinkedIn"
+              className="w-8 h-8"
+            />
+          </a>
+          <a href="https://aashna-verma.github.io" target="_blank" rel="noopener noreferrer">
+            <img
+              src="https://img.icons8.com/color/48/000000/globe.png"
+              alt="Website"
+              className="w-8 h-8"
+            />
+          </a>
+          <a href="https://github.com/Aashna-Verma" target="_blank" rel="noopener noreferrer">
+            <img
+              src="https://img.icons8.com/ios-glyphs/30/000000/github.png"
+              alt="GitHub"
+              className="w-8 h-8"
+            />
+          </a>
+        </div>
+      </td>
+      <td className="text-center p-4">
+        <Image
+          src="https://avatars.githubusercontent.com/u/54924158?s=400&u=c47304b2ca61dbe49e55a4c0a32bf499da27fd27&v=4"
+          alt="Mumtahin Farabi Picture"
+          width={100}
+          height={100}
+          className="rounded-full mx-auto"
+        />
+        <div className="flex justify-center space-x-4 mt-2">
+          <a href="https://www.linkedin.com/in/mfarabi/" target="_blank" rel="noopener noreferrer">
+            <img
+              src="https://img.icons8.com/fluency/48/000000/linkedin.png"
+              alt="LinkedIn"
+              className="w-8 h-8"
+            />
+          </a>
+          <a href="https://mfarabi.dev" target="_blank" rel="noopener noreferrer">
+            <img
+              src="https://img.icons8.com/color/48/000000/globe.png"
+              alt="Website"
+              className="w-8 h-8"
+            />
+          </a>
+          <a href="https://github.com/MFarabi619" target="_blank" rel="noopener noreferrer">
+            <img
+              src="https://img.icons8.com/ios-glyphs/30/000000/github.png"
+              alt="GitHub"
+              className="w-8 h-8"
+            />
+          </a>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>

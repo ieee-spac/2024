@@ -2,14 +2,18 @@ import React from 'react'
 import type { Preview } from '@storybook/react'
 
 import { ThemeProvider } from 'next-themes'
-import { withThemeByClassName } from '@storybook/addon-themes'// Wide button with a pen and text. Toggles both Preview Components and Preview Background
+import { withThemeByClassName } from '@storybook/addon-themes' // Wide button with a pen and text. Toggles both Preview Components and Preview Background
 import { type ThemeVars, themes } from '@storybook/theming'
 import { DARK_MODE_EVENT_NAME } from 'storybook-dark-mode'
 
 import { DocsContainer, type DocsContextProps } from '@storybook/blocks'
 
 import { customViewports } from './custom-viewports'
-import { commonTheme, darkUIStorybook, lightUIStorybook } from './themes-storybook-ui'
+import {
+  commonTheme,
+  darkUIStorybook,
+  lightUIStorybook,
+} from './themes-storybook-ui'
 import '@/app/(home)/globals.css'
 
 const preview: Preview = {
@@ -31,6 +35,7 @@ const preview: Preview = {
       storySort: {
         method: 'alphabetical',
         order: [
+          'Welcome',
           'Configure your project',
           'Twilight Design System',
           'Website',
@@ -42,12 +47,7 @@ const preview: Preview = {
             'UI',
           ],
           'Shadcn-ui',
-          [
-            'Introduction',
-            'Semantic Color Palette',
-            'Font Size',
-            'Typography',
-          ],
+          ['Introduction', 'Semantic Color Palette', 'Font Size', 'Typography'],
           'Tailwind CSS Primitives',
           'Storybook Starters',
         ],
@@ -133,7 +133,9 @@ const preview: Preview = {
           setDark(state))
         const currentProps = { ...props }
         // currentProps.theme = isDark ? themes.dark : themes.light
-        currentProps.theme = isDark ? darkUIStorybook as ThemeVars : themes.light
+        currentProps.theme = isDark
+          ? (darkUIStorybook as ThemeVars)
+          : themes.light
         // console.log('Current Props Theme:', currentProps.theme)
         // console.log('Themes Dark:', themes.dark)
         // console.log('Dark UI Storybook:', darkUIStorybook)
