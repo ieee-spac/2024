@@ -75,6 +75,7 @@
     "@vercel/speed-insights": "^1.0.12",
     "@whitespace/storybook-addon-html": "6.1.1",
     "autoprefixer": "^10.4.19",
+    "chromatic": "^11.10.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "commitizen": "^4.3.0",
