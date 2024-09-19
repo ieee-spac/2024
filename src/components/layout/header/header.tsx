@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
 import Logo from '@root/public/assets/ieee_spac_logo_vertical_no_year.svg'
-import { Button } from '@/components/shadcn/ui/button/button'
+import { HeaderNavLinkButton } from './header-nav-link-button'
 import { HamburgerButton } from '@/components/twilight/hamburger-button/hamburger-button'
 
 const links = [
@@ -17,24 +17,6 @@ const links = [
   // { name: "FAQ", path: "/faq" },
   { name: 'Contact', path: '#contact' },
 ]
-
-function NavigationLinks({ onCloseMenu }: { onCloseMenu: () => void }) {
-  return (
-    <>
-      {links.map(link => (
-        <Link key={link.name} href={link.path} scroll>
-          <Button
-            size="lg"
-            className="text-primary shadow-sm hover:text-primary-foreground py-8 w-full bg-black/[0.25] border border-auxiliary md:border-hidden uppercase md:bg-black/[0.25] md:py-6 md:px-5 md:hover:scale-110 hover:bg-auxiliary group-hover:shadow-[0_0px_5px_rgba(0,202,255,1)]"
-            onClick={onCloseMenu}
-          >
-            {link.name}
-          </Button>
-        </Link>
-      ))}
-    </>
-  )
-}
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -52,6 +34,20 @@ export function Header() {
       window.removeEventListener('resize', handleResize)
     }
   }, [menuOpen])
+
+  function HeaderNavLinkButtonsContainer() {
+    return (
+      <>
+        {links.map(link =>
+          HeaderNavLinkButton({
+            name: link.name,
+            path: link.path,
+            onCloseMenu: () => setMenuOpen(false),
+          }),
+        )}
+      </>
+    )
+  }
 
   return (
     <>
@@ -72,7 +68,7 @@ export function Header() {
             <HamburgerButton menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
             <nav className="hidden md:block">
               <menu className="flex flex-nowrap bg-transparent md:space-x-4 ">
-                <NavigationLinks onCloseMenu={() => setMenuOpen(false)} />
+                <HeaderNavLinkButtonsContainer />
               </menu>
             </nav>
           </div>
@@ -84,7 +80,7 @@ export function Header() {
         <menu
           className={`flex flex-col fixed right-0 top-20 z-50 w-fit space-y-4 rounded-xl border border-card p-4 backdrop-blur-xl transition duration-700 ease-in-out ${menuOpen ? 'mr-4' : 'translate-x-full md:translate-x-0'}`}
         >
-          <NavigationLinks onCloseMenu={() => setMenuOpen(false)} />
+          <HeaderNavLinkButtonsContainer />
         </menu>
       </nav>
 
