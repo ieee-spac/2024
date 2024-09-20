@@ -3,7 +3,6 @@ import Image from 'next/image'
 import logo from '@root/public/assets/spac_logo_year_stars.svg'
 // import { SponsorshipPackage } from '@/components/sections/home/hero/sponsorship-package'
 import { ShinyButton } from '@/components/twilight/shiny-button/shiny-button'
-import { BorderBeam } from '@/components/twilight/border-beam/border-beam'
 import SparklesText from '@/components/twilight/sparkles-text/sparkles-text'
 import ShineBorder from '@/components/twilight/shine-pulse/shine-pulse'
 
@@ -24,12 +23,6 @@ export function Hero() {
         color={['hsl(var(--primary))', 'hsl(var(--warning))', 'hsl(var(--tertiary))']}
       >
         <main className="backdrop-blur-xs group flex h-fit w-full max-w-4xl flex-col items-center justify-center space-y-4 rounded-lg hover:border-primary px-4 py-8 transition-all duration-300 ease-in-out hover:shadow-[0_0px_15px_rgba(0,202,255,1)] md:px-20 md:py-16">
-          {/* <BorderBeam */}
-          {/*   className="transition-opacity duration-500 group-hover:opacity-0" */}
-          {/*   size={500} */}
-          {/*   colorFrom="hsl(var(--primary))" */}
-          {/*   colorTo="hsl(var(--auxiliary))" */}
-          {/* /> */}
           {/* Logo */}
           <Image
             priority
