@@ -30,12 +30,12 @@ const config: StorybookConfig = {
     '@storybook/addon-themes',
     // Portrait. Toggle only Preview Background. Not affected by other two, use to 'lock' the background.
     '@storybook/addon-backgrounds',
-    // Person inside circle icon. Also 'Accessibility' tab to action bar
-    '@storybook/addon-a11y',
 
     // --------------- Action Bar ---------------
     // https://storybook.js.org/docs/essentials/controls
     '@storybook/addon-controls',
+    // Person inside circle icon on Toolbar. Also 'Accessibility' tab to action bar
+    '@storybook/addon-a11y',
     // Accessibility tab added by '@storybook/addon-a11y'
     {
       name: '@storybook/addon-designs', // Actually has amazing docs for once: https://storybookjs.github.io/addon-designs/?path=/docs/docs-quick-start--docs
