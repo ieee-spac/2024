@@ -87,7 +87,7 @@ const patronsData: Tier = {
       src: uottawa_ieee_logo,
       alt: 'uOttawa IEEE Logo',
       url: 'https://ieeeuottawa.ca',
-      overrides: 'w-1/3 bobbing-animation-4',
+      overrides: 'w-1/3 bobbing-animation-3',
     },
   ],
   bronze: [
@@ -95,13 +95,13 @@ const patronsData: Tier = {
       src: nokia_logo,
       alt: 'Nokia logo',
       url: 'https://www.nokia.com',
-      overrides: 'w-1/4 bobbing-animation-1',
+      overrides: 'w-1/4 bobbing-animation-4',
     },
     {
       src: solace_logo,
       alt: 'Solace logo',
       url: 'https://solace.com',
-      overrides: 'w-1/4 bobbing-animation-1',
+      overrides: 'w-1/4 bobbing-animation-4',
     },
   ],
 }
