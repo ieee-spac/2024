@@ -3,7 +3,7 @@ import { Header } from '@/components/layout/header/header'
 import { About } from '@/components/sections/home/about/about'
 import { Contact } from '@/components/sections/home/contact/contact'
 import { Hero } from '@/components/sections/home/hero/hero'
-import { PastPatrons } from '@/components/sections/home/past-patrons/past-patrons'
+import { Patrons } from '@/components/sections/home/patrons/patrons'
 
 export default function HomePage() {
   return (
@@ -11,7 +11,7 @@ export default function HomePage() {
       <Header />
       <Hero />
       <About />
-      <PastPatrons />
+      <Patrons />
       <Contact />
       <Footer />
     </>
