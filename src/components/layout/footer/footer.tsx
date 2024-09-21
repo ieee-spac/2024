@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import { FaFacebookF, FaGithub, FaInstagram, FaLinkedinIn } from 'react-icons/fa6'
+import { FaFacebookF, FaFigma, FaGithub, FaInstagram, FaLinkedinIn } from 'react-icons/fa6'
+import { SiChromatic, SiStorybook } from 'react-icons/si'
 import Image from 'next/image'
 import ieee_spac_logo_combined_horizontal from '@root/public/assets/ieee_spac_logo_combined_horizontal.svg'
 import { cn } from '@/components/utils/cn'
@@ -38,6 +39,24 @@ const DEFAULT_SOCIAL_MEDIA_ICONS_LIST = [
     url: 'https://github.com/ieee-spac/2024',
     Icon: FaGithub,
     className: 'hover:text-green-500',
+  },
+  {
+    name: 'Figma',
+    url: 'https://www.figma.com/community/file/1417704325784085062/ieee-spac-2024-twilight-design-system',
+    Icon: FaFigma,
+    className: 'hover:text-indigo-400',
+  },
+  {
+    name: 'Storybook',
+    url: 'https://665264891b6bc70eded9109a-fejlvqtgov.chromatic.com/?path=/docs/welcome--docs',
+    Icon: SiStorybook,
+    className: 'hover:text-pink-500',
+  },
+  {
+    name: 'Chromatic',
+    url: 'https://www.chromatic.com/library?appId=665264891b6bc70eded9109a&branch=dev',
+    Icon: SiChromatic,
+    className: 'hover:text-orange-600',
   },
 ]
 
