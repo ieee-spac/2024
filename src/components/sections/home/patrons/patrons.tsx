@@ -49,7 +49,7 @@ const patronsData: Tier = {
       src: ericsson_logo,
       alt: 'Ericsson logo',
       url: 'https://www.ericsson.com/en/about-us/company-facts/ericsson-worldwide/canada',
-      overrides: 'w-1/4 bobbing-animation-1',
+      overrides: 'w-1/4 bobbing-animation-2',
     },
   ],
   silver: [
