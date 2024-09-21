@@ -22,7 +22,7 @@ export function Hero() {
       <ShineBorder
         color={['hsl(var(--primary))', 'hsl(var(--warning))', 'hsl(var(--tertiary))']}
       >
-        <main className="backdrop-blur-xs group flex h-fit w-full max-w-4xl flex-col items-center justify-center space-y-4 rounded-lg hover:border-primary px-4 py-8 transition-all duration-300 ease-in-out hover:shadow-[0_0px_15px_rgba(0,202,255,1)] md:px-20 md:py-16">
+        <main className="backdrop-blur-xs group flex h-fit w-full max-w-4xl flex-col items-center justify-center space-y-4 rounded-sm hover:border-primary px-4 py-8 transition-all duration-300 ease-in-out hover:shadow-[0_0px_15px_rgba(0,202,255,1)] md:px-20 md:py-16">
           {/* Logo */}
           <Image
             priority

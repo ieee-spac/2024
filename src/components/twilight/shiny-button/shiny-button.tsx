@@ -32,7 +32,7 @@ export function ShinyButton(
   return (
     <motion.button
       {...animationProps}
-      className="relative rounded-lg px-8 py-3 font-medium backdrop-blur-2xl transition-[box-shadow] duration-700 ease-in-out group-hover:shadow-[0_0px_15px_hsl(var(--tertiary))] bg-[radial-gradient(circle_at_50%_0%,hsl(var(--primary)/10%)_0%,transparent_60%)]"
+      className="relative rounded-sm px-8 py-3 font-medium backdrop-blur-2xl transition-[box-shadow] duration-700 ease-in-out group-hover:shadow-[0_0px_15px_hsl(var(--tertiary))] bg-[radial-gradient(circle_at_50%_0%,hsl(var(--primary)/10%)_0%,transparent_60%)]"
       onClick={onClick}
     >
       <span
