@@ -91,7 +91,7 @@ export function Contact() {
       className="overflow-none mx-auto my-20 max-w-3xl space-y-10 px-3 md:px-8 "
     >
       <h3 className="text-5xl font-bold text-primary sm:text-6xl">Contact</h3>
-      <Card>
+      <Card className="transition-all duration-700 ease-in-out hover:drop-shadow-[0_0px_5px_rgba(0,202,255,1)]">
         <CardHeader>
           <CardTitle className="font-bold text-xl text-neutral-800 dark:text-neutral-200">Get in Touch</CardTitle>
           <CardDescription
