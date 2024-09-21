@@ -39,8 +39,8 @@
   <tr>
     <th align="center">
       <a
-        href="https://www.figma.com/design/rxRdlFbCkzJDezvIPPaQvo/IEEE-SPAC-2024-Website?node-id=492-561&t=JQ71yLIitUFP0EG8-1"
-        ><strong>Brand</strong></a
+        href="https://665264891b6bc70eded9109a-fejlvqtgov.chromatic.com/?path=/docs/welcome--docs"
+        ><strong>Storybook</strong></a
       >
     </th>
     <th align="center">
