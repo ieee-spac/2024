@@ -61,11 +61,11 @@
   <tr>
     <td align="center">
       <a
-        href="https://www.figma.com/design/rxRdlFbCkzJDezvIPPaQvo/IEEE-SPAC-2024-Website?node-id=492-561&t=JQ71yLIitUFP0EG8-1"
+        href="https://665264891b6bc70eded9109a-fejlvqtgov.chromatic.com/?path=/docs/welcome--docs"
       >
         <img
-          src="https://github.com/user-attachments/assets/3e413c0b-b8c6-48af-9d35-afb1062a7608"
-          alt="Brand"
+          src="https://github.com/user-attachments/assets/9a82999d-56aa-4117-ad5d-647a2252cefd"
+          alt="Storybook"
         />
       </a>
     </td>
