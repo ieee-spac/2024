@@ -81,7 +81,7 @@ export function Footer({
           <Link href="/" className="scroll-smooth">
             <Logo />
           </Link>
-          <p>Copyright © 2024 IEEE - All right reserved.</p>
+          <p>Copyright © 2024 IEEE - All rights reserved.</p>
         </aside>
 
         {/* SOCIAL MEDIA ICONS */}
