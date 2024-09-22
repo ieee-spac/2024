@@ -43,7 +43,7 @@ const preview: Preview = {
             'Layout',
             ['Header', 'Footer'],
             'Sections',
-            ['Hero', 'About', 'Past Patrons', 'Contact'],
+            ['Hero', 'About', 'Patrons', 'Past Patrons', 'Contact'],
             'UI',
           ],
           'Shadcn-ui',
