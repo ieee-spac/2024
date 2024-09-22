@@ -3,7 +3,9 @@ import Image from 'next/image'
 
 /*
  * import drdc_canada_logo from '@root/public/assets/drdc_canada_logo.svg'
- * import fdm_logo from '@root/public/assets/fdm_logo.svg'
+ * import fdm_logo from
+
+ '@root/public/assets/fdm_logo.svg'
  * import general_dynamics_logo from '@root/public/assets/general_dynamics_logo.svg'
  * import public_service_commission_of_canada_logo from '@root/public/assets/public_service_commission_of_canada_logo.svg'
  * import ross_video_logo from '@root/public/assets/ross_video_logo.svg'
@@ -12,13 +14,16 @@ import Image from 'next/image'
 import ciena_logo from '@root/public/assets/ciena_logo.svg'
 import nokia_logo from '@root/public/assets/nokia_logo.svg'
 import ericsson_logo from '@root/public/assets/ericsson_logo.svg'
-import blackberry_qnx_logo from '@root/public/assets/blackberry_qnx_logo.svg'
+/* import blackberry_qnx_logo from '@root/public/assets/blackberry_qnx_logo.svg' */
+import blackberry_qnx_logo from '@root/public/assets/blackberry_qnx_logo.jpg'
 import uottawa_ieee_logo from '@root/public/assets/uottawa_ieee_logo.svg'
 import ised_logo from '@root/public/assets/ised_logo.svg'
-import nrc_logo from '@root/public/assets/nrc_logo.svg'
+/* import nrc_logo from '@root/public/assets/nrc_logo.svg' */
+import nrc_logo from '@root/public/assets/nrc_logo.png'
 import solace_logo from '@root/public/assets/solace_logo.svg'
 import cse_logo from '@root/public/assets/cse_logo.svg'
-import cbsa_logo from '@root/public/assets/canada_border_services_logo.svg'
+/* import cbsa_logo from '@root/public/assets/canada_border_services_logo.svg' */
+import cbsa_logo from '@root/public/assets/canada_border_services_logo.jpg'
 import { Spotlight } from '@/components/twilight/spotlight/spotlight'
 // import { SponsorshipPackage } from '@/components/sections/home/hero/sponsorship-package'
 import { ShinyButton } from '@/components/twilight/shiny-button/shiny-button'
@@ -69,18 +74,19 @@ const patronsData: Tier = {
       src: nrc_logo,
       alt: 'NRC Logo',
       url: 'https://nrc.canada.ca/en',
-      overrides: 'w-1/3 bobbing-animation-3',
+      overrides: 'w-1/2 bobbing-animation-3',
     },
     {
       src: cbsa_logo,
       alt: 'Canada Border Services Agency (CBSA) Logo',
       url: 'https://www.cbsa-asfc.gc.ca/menu-eng.html',
-      overrides: 'w-1/4 bobbing-animation-3',
+      overrides: 'w-1/3 bobbing-animation-3',
     },
     {
       src: ised_logo,
       alt: 'ISED logo',
       url: 'https://ised-isde.canada.ca/site/ised/en',
+      overrides: 'w-1/2 bobbing-animation-3',
     },
     {
       src: uottawa_ieee_logo,
