@@ -74,7 +74,7 @@ export function Footer({
 }) {
   return (
     <footer className="border-t-[0.25px] border-secondary text-neutral-content transition-all duration-700 hover:shadow-[0_0px_15px_rgba(0,202,255,0.5)]">
-      <div className="flex justify-between mx-auto w-full max-w-7xl items-center px-3 py-4 md:px-8">
+      <div className="flex justify-between mx-auto w-full max-w-7xl items-start px-3 py-4 md:px-8">
 
         {/* LOGO */}
         <aside className="flex flex-col">
@@ -85,7 +85,7 @@ export function Footer({
         </aside>
 
         {/* SOCIAL MEDIA ICONS */}
-        <nav className="flex">
+        <nav className="flex flex-wrap">
           {socialMediaData.map(({ name, url, Icon, className }) => (
             <a
               key={name}
