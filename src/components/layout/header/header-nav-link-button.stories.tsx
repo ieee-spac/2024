@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
 import { fn } from '@storybook/test'
-import { HeaderNavLinkButton } from './header-nav-link-button'
+import { HeaderNavLinkButton } from '@/components/layout/header/header-nav-link-button'
 
 const meta = {
   title: 'Website/Layout/Header/HeaderNavLinkButton',

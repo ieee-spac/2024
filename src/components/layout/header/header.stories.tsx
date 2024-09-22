@@ -1,6 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { Header } from './header'
+import { Header } from '@/components/layout/header/header'
+import { links } from '@/components/layout/header/links'
+
+const logo = '/assets/ieee_spac_logo_vertical_no_year.svg'
 
 const meta = {
   title: 'Website/Layout/Header',
@@ -11,11 +14,13 @@ const meta = {
     // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
     layout: 'fullscreen',
   },
-  args: {},
+  args: { logo, links },
 } satisfies Meta<typeof Header>
 
 export default meta
 
 type Story = StoryObj<typeof meta>
 
-export const Default: Story = {}
+export const Default: Story = {
+  args: { logo, links },
+}

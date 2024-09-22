@@ -4,11 +4,17 @@ import { About } from '@/components/sections/home/about/about'
 import { Contact } from '@/components/sections/home/contact/contact'
 import { Hero } from '@/components/sections/home/hero/hero'
 import { Patrons } from '@/components/sections/home/patrons/patrons'
+import { links } from '@/components/layout/header/links'
+
+const logoUrl = '/assets/ieee_spac_logo_vertical_no_year.svg'
 
 export default function HomePage() {
   return (
     <>
-      <Header />
+      <Header
+        logo={logoUrl}
+        links={links}
+      />
       <Hero />
       <About />
       <Patrons />
