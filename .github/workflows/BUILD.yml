@@ -1,4 +1,4 @@
-name: CI
+name: Build
 
 on:
   push:
@@ -36,31 +36,8 @@ jobs:
       - name: 🧐 Check Code Quality
         run: pnpm lint
 
-      # - name: 🎭 Install Playwright
-      #   run: pnpm i playwright http-server wait-on; npx playwright install --with-deps
-
       - name: 📔 Build Storybook
         run: pnpm build-storybook --quiet
-
-      # - name: 🧪 Serve Storybook and run tests
-      #   run: |
-      #     pnpx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
-      #       "pnpm exec http-server storybook-static --port 6006 --silent" \
-      #       "pnpm exec wait-on tcp:6006 && pnpm test-storybook"
-
-      # - name: 🔬 Run Unit Tests
-      #   run: pnpm jest ...
-
-      # - name: 🔍 Run Integration Tests
-      #   run: pnpm jest ...
-
-      # - name: ⌚ 💀 Run E2E Tests
-      #   run: pnpx playwright test
-
-      - name: 👀 Run Visual Tests
-        env:
-          CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-        run: pnpm chromatic
 
       - name: 🏗️ Build Project
         # env:

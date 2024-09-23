@@ -1,0 +1,40 @@
+name: Visual Tests
+
+on:
+  push:
+    branches: main
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [20]
+
+    steps:
+      - name: 🛎️ Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # All history for branches and tags
+
+      - name: 📦 Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: 🛠️ Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: '${{ matrix.node-version }}'
+          cache: pnpm
+
+      - name: 📂 Install Dependencies
+        run: pnpm i
+
+      - name: 👀 Run Visual Tests
+        env:
+          CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+        run: pnpm chromatic
+
+      - name: 💰 Profit
+        run: echo 🐞
