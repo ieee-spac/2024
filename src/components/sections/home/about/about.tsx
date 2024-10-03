@@ -71,7 +71,7 @@ function SectionItem({
         <h4 className="text-xl font-semibold text-base-content sm:text-2xl md:text-3xl">
           {title}
         </h4>
-        <p className="text-sm text-stone-400 sm:text-base md:text-lg">
+        <p className="text-sm dark:text-stone-400 text-stone-600 sm:text-base md:text-lg">
           {description}
         </p>
       </div>
@@ -119,40 +119,40 @@ export function About() {
         <div className="grid h-[38vw] max-h-56 grid-flow-col justify-center">
           <div className="bobbing-animation-1 flex aspect-square h-full items-center justify-center rounded-full bg-tertiary text-center text-tertiary-foreground sm:-mr-1">
             <div>
-              <h4 className="text-5xl font-bold min-[375px]:text-6xl min-[425px]:text-7xl sm:text-8xl">
+              <h4 className="text-5xl font-bold min-[375px]:text-6xl min-[425px]:text-7xl sm:text-8xl text-background">
                 <CountUp end={100} duration={3} enableScrollSpy scrollSpyOnce />
               </h4>
-              <p className="font-bold min-[375px]:text-xl min-[425px]:text-2xl sm:text-3xl">
+              <p className="font-bold min-[375px]:text-xl min-[425px]:text-2xl sm:text-3xl text-background">
                 Companies
               </p>
             </div>
           </div>
           <div className="bobbing-animation-4 -mr-4 flex aspect-square h-[49%] items-center justify-center self-end rounded-full bg-neutral text-center sm:-mr-8">
             <div>
-              <h4 className="text-xl font-bold min-[375px]:text-3xl min-[425px]:text-4xl sm:text-5xl">
+              <h4 className="text-xl font-bold min-[375px]:text-3xl min-[425px]:text-4xl sm:text-5xl text-background">
                 <CountUp end={200} duration={3} enableScrollSpy scrollSpyOnce />
               </h4>
-              <p className=" sm:text-md text-[0.5rem] font-bold min-[375px]:text-xs min-[425px]:text-sm">
+              <p className=" sm:text-md text-[0.5rem] font-bold min-[375px]:text-xs min-[425px]:text-sm text-background">
                 Students
               </p>
             </div>
           </div>
           <div className="bobbing-animation-2 -mr-3 flex aspect-square h-[65%] items-center justify-center self-start rounded-full bg-warning text-center text-warning-foreground sm:-mr-5">
             <div>
-              <h4 className="text-4xl font-bold min-[425px]:text-5xl sm:text-6xl">
+              <h4 className="text-4xl font-bold min-[425px]:text-5xl sm:text-6xl text-background">
                 <CountUp end={9} duration={3} enableScrollSpy scrollSpyOnce />
               </h4>
-              <p className="font-bold min-[375px]:text-xl min-[425px]:text-2xl sm:text-3xl">
+              <p className="font-bold min-[375px]:text-xl min-[425px]:text-2xl sm:text-3xl text-background">
                 Years
               </p>
             </div>
           </div>
           <div className="bobbing-animation-3 flex aspect-square h-[59%] items-center justify-center self-end rounded-full bg-auxiliary text-center text-auxiliary-content">
             <div>
-              <h4 className="text-3xl font-bold min-[375px]:text-4xl min-[425px]:text-5xl sm:text-6xl">
+              <h4 className="text-3xl font-bold min-[375px]:text-4xl min-[425px]:text-5xl sm:text-6xl text-background">
                 <CountUp end={300} duration={3} enableScrollSpy scrollSpyOnce />
               </h4>
-              <p className="sm:text-md text-[0.5rem] font-bold min-[375px]:text-xs min-[425px]:text-sm">
+              <p className="sm:text-md text-[0.5rem] font-bold min-[375px]:text-xs min-[425px]:text-sm text-background">
                 Attendees
               </p>
             </div>
