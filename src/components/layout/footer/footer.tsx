@@ -74,31 +74,79 @@ export function Footer({
 }) {
   return (
     <footer className="border-t-[0.25px] border-secondary text-neutral-content transition-all duration-700 hover:shadow-[0_0px_15px_rgba(0,202,255,0.5)]">
-      <div className="flex justify-between mx-auto w-full max-w-7xl items-start px-3 py-4 md:px-8">
+      <div className="mx-auto w-full max-w-7xl px-3 py-4 md:px-8">
 
-        {/* LOGO */}
-        <aside className="flex flex-col">
-          <Link href="/" className="scroll-smooth">
-            <Logo />
-          </Link>
-          <p>Copyright © 2024 IEEE - All rights reserved.</p>
-        </aside>
+        {/* LOGO and SOCIAL MEDIA ICONS in one row */}
+        <div className="flex flex-wrap justify-between items-start">
+          {/* LOGO */}
+          <aside className="flex flex-col">
+            <Link href="/" className="scroll-smooth">
+              <Logo />
+            </Link>
+            <p>Copyright © 2024 IEEE - All rights reserved.</p>
+          </aside>
 
-        {/* SOCIAL MEDIA ICONS */}
-        <nav className="flex flex-wrap justify-center 2xs:justify-end">
-          {socialMediaData.map(({ name, url, Icon, className }) => (
+          {/* SOCIAL MEDIA ICONS */}
+          <nav className="flex flex-wrap justify-center 2xs:justify-end">
+            {socialMediaData.map(({ name, url, Icon, className }) => (
+              <a
+                key={name}
+                aria-label={`${name} Link`}
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={cn('transition-all duration-700 hover:scale-125 p-4 text-2xl', className)}
+              >
+                <Icon />
+              </a>
+            ))}
+          </nav>
+        </div>
+
+        {/* CREDITS */}
+        <div className="mt-6 text-sm md:text-center">
+          <p>
+            Inspired by the
+            {' '}
             <a
-              key={name}
-              aria-label={`${name} Link`}
-              href={url}
+              href="https://www.figma.com/design/rxRdlFbCkzJDezvIPPaQvo/IEEE-SPAC-2024?node-id=902-880&t=ZldInFyhfowPbI3q-1"
               target="_blank"
               rel="noopener noreferrer"
-              className={cn('transition-all duration-700 hover:scale-125 p-4 text-2xl', className)}
+              className="hover:text-primary underline transition ease-in-out duration-700"
             >
-              <Icon />
+              2022 SPAC Website
             </a>
-          ))}
-        </nav>
+            .
+            Brand Cover made with 💙 by
+            {
+              ' '
+            }
+            <a
+              href="https://www.linkedin.com/in/aashna-verma-000/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-auxiliary
+underline transition ease-in-out duration-700
+                     "
+            >
+              Aashna Verma
+            </a>
+            .
+            Re-designed & developed with 🧡 by
+            {
+              ' '
+            }
+            <a
+              href="https://www.linkedin.com/in/mfarabi/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-warning underline transition ease-in-out duration-700"
+            >
+              Mumtahin Farabi
+            </a>
+            .
+          </p>
+        </div>
       </div>
     </footer>
   )
