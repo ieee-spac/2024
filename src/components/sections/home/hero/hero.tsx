@@ -6,6 +6,10 @@ import { ShinyButton } from '@/components/twilight/shiny-button/shiny-button'
 import SparklesText from '@/components/twilight/sparkles-text/sparkles-text'
 import ShineBorder from '@/components/twilight/shine-pulse/shine-pulse'
 
+const LINK_PATRONAGE_PACKAGE = 'https://drive.google.com/file/d/1wfvpv5T8Xg-cmt5kmps9Gzlddq9_Cdc0/view?usp=sharing'
+const LINK_SPAC_TICKETS = 'https://events.vtools.ieee.org/m/436955'
+const LINK_SPAC_PLUS_AGM_TICKETS = 'https://events.vtools.ieee.org/m/435598'
+
 export function Hero() {
   return (
     // Grid background container
@@ -58,16 +62,35 @@ export function Hero() {
               </div>
             )}
           />
-          {/* <SponsorshipPackage /> */}
-          <a
-            href="https://drive.google.com/file/d/1wfvpv5T8Xg-cmt5kmps9Gzlddq9_Cdc0/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <ShinyButton
-              text="Become a Patron"
-            />
-          </a>
+          <div className="flex flex-wrap lg:flex-nowrap md:text-nowrap w-full justify-center gap-2">
+            <a
+              href={LINK_PATRONAGE_PACKAGE}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <ShinyButton
+                text="Become a Patron"
+              />
+            </a>
+            <a
+              href={LINK_SPAC_TICKETS}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <ShinyButton
+                text="Registration (SPAC)"
+              />
+            </a>
+            <a
+              href={LINK_SPAC_PLUS_AGM_TICKETS}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <ShinyButton
+                text="Registration (SPAC+AGM)"
+              />
+            </a>
+          </div>
         </main>
       </ShineBorder>
     </div>
