@@ -169,25 +169,25 @@ export function Patrons() {
         title="Platinum"
         titleColor="text-warning"
         logos={patronsData.platinum}
-        gradientClass="from-warning via-secondary to-black"
+        gradientClass="from-warning to-background"
       />
       <LogoSection
         title="Gold"
         titleColor="text-tertiary"
         logos={patronsData.gold}
-        gradientClass="from-tertiary via-secondary to-black"
+        gradientClass="from-tertiary to-background"
       />
       <LogoSection
         title="Silver"
         titleColor="text-slate-400"
         logos={patronsData.silver}
-        gradientClass="from-slate-400 via-secondary to-black"
+        gradientClass="from-slate-400 to-background"
       />
       <LogoSection
         title="Bronze"
         titleColor="text-amber-800"
         logos={patronsData.bronze}
-        gradientClass="from-amber-800 via-secondary to-black"
+        gradientClass="from-amber-800 to-background"
       />
       <span className="inline-flex w-full justify-center">
         {/* <SponsorshipPackage /> */}
