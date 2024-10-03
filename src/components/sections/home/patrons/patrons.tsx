@@ -2,6 +2,7 @@
 import { patronsData } from '@/components/sections/home/patrons/patrons.data'
 import { ShinyButton } from '@/components/twilight/shiny-button/shiny-button'
 import { LogoSection } from '@/components/sections/home/patrons/patrons-tier'
+import { Spotlight } from '@/components/twilight/spotlight/spotlight'
 
 const LINK_PATRONAGE_PACKAGE = 'https://drive.google.com/file/d/1wfvpv5T8Xg-cmt5kmps9Gzlddq9_Cdc0/view?usp=sharing'
 
@@ -11,6 +12,10 @@ export function Patrons() {
       <h2 className="mb-10 text-5xl font-bold text-primary sm:text-6xl">
         Our Patrons
       </h2>
+      <Spotlight
+        className="-left-20 top-[150rem] md:left-10 md:top-[140rem]"
+        fill="LightGoldenRodYellow"
+      />
       <LogoSection
         title="Platinum"
         titleColor="text-warning"
