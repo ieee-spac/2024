@@ -16,7 +16,11 @@ export function HeaderNavLinkButton({
     <Link key={name} href={path} scroll>
       <Button
         size="lg"
-        className="text-primary shadow-sm hover:text-primary-foreground py-8 w-full bg-black/[0.25] border border-auxiliary md:border-hidden uppercase md:bg-black/[0.25] md:py-6 md:px-5 md:hover:scale-110 hover:bg-auxiliary group-hover:shadow-[0_0px_5px_rgba(0,202,255,1)]"
+        className="text-primary hover:text-primary-foreground uppercase
+              shadow-sm border border-auxiliary md:border-hidden
+              py-8 md:py-6 md:px-5 md:hover:scale-110 w-full
+              bg-background/[0.25] md:dark:bg-black/[0.25]
+              hover:dark:bg-primary group-hover:shadow-[0_0px_5px_rgba(0,202,255,1)]"
         onClick={onCloseMenu}
       >
         {name}
