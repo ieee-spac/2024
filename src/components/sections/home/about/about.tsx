@@ -8,6 +8,10 @@ import networking_booths_image from '@root/public/assets/networking_booths_image
 import presentation_section_image from '@root/public/assets/presentation_section_image.svg'
 import professional_1_on_1_image from '@root/public/assets/professional_1_on_1_image.svg'
 import workshops_image from '@root/public/assets/workshops_image.svg'
+import { ShinyButton } from '@/components/twilight/shiny-button/shiny-button'
+
+const LINK_SPAC_TICKETS = 'https://events.vtools.ieee.org/m/436955'
+const LINK_SPAC_PLUS_AGM_TICKETS = 'https://events.vtools.ieee.org/m/435598'
 
 // Data for "A typical SPAC" section Items
 const sections = [
@@ -182,6 +186,26 @@ export function About() {
           />
         ))}
       </section>
+      <div className="flex flex-wrap lg:flex-nowrap md:text-nowrap w-full justify-center gap-2">
+        <a
+          href={LINK_SPAC_TICKETS}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <ShinyButton
+            text="Registration (SPAC)"
+          />
+        </a>
+        <a
+          href={LINK_SPAC_PLUS_AGM_TICKETS}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <ShinyButton
+            text="Registration (SPAC+AGM)"
+          />
+        </a>
+      </div>
     </article>
   )
 }
