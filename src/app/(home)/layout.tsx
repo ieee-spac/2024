@@ -4,8 +4,10 @@ import { SpeedInsights } from '@vercel/speed-insights/next'
 
 import { Open_Sans } from 'next/font/google'
 import type { Metadata, Viewport } from 'next'
+import { ThemeProvider } from '@/components/utils/theme-provider'
 
 import '@/app/(home)/globals.css'
+
 import { Toaster } from '@/components/shadcn/ui/sonner/sonner'
 
 const openSans = Open_Sans({ subsets: ['latin'] })
@@ -30,7 +32,13 @@ export default function Layout({ children }: { children: ReactNode }) {
       suppressHydrationWarning
     >
       <body className={openSans.className}>
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+        >
+          {children}
+        </ThemeProvider>
         <Toaster />
         <Analytics />
         <SpeedInsights />
