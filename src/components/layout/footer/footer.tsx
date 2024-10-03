@@ -20,43 +20,43 @@ const DEFAULT_SOCIAL_MEDIA_ICONS_LIST = [
     name: 'Instagram',
     url: 'https://www.instagram.com/ieeespac/?hl=en',
     Icon: FaInstagram,
-    className: 'hover:text-rose-500',
+    className: 'text-rose-500',
   },
   {
     name: 'LinkedIn',
     url: 'https://www.linkedin.com/company/ieeespac/',
     Icon: FaLinkedinIn,
-    className: 'hover:text-sky-700',
+    className: 'text-sky-700',
   },
   {
     name: 'Facebook',
     url: 'https://www.facebook.com/ieeespacottawa/',
     Icon: FaFacebookF,
-    className: 'hover:text-blue-600',
+    className: 'text-blue-600',
   },
   {
     name: 'GitHub',
     url: 'https://github.com/ieee-spac/2024',
     Icon: FaGithub,
-    className: 'hover:text-green-500',
+    className: 'text-green-500',
   },
   {
     name: 'Figma',
     url: 'https://www.figma.com/community/file/1417704325784085062/ieee-spac-2024-twilight-design-system',
     Icon: FaFigma,
-    className: 'hover:text-indigo-400',
+    className: 'text-indigo-400',
   },
   {
     name: 'Storybook',
     url: 'https://665264891b6bc70eded9109a-fejlvqtgov.chromatic.com/?path=/docs/welcome--docs',
     Icon: SiStorybook,
-    className: 'hover:text-pink-500',
+    className: 'text-pink-500',
   },
   {
     name: 'Chromatic',
     url: 'https://www.chromatic.com/library?appId=665264891b6bc70eded9109a&branch=dev',
     Icon: SiChromatic,
-    className: 'hover:text-orange-600',
+    className: 'text-orange-600',
   },
 ]
 
@@ -126,7 +126,7 @@ export function Footer({
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-auxiliary
-underline transition ease-in-out duration-700
+font-bold transition ease-in-out duration-700
                      "
             >
               Aashna Verma
@@ -140,7 +140,7 @@ underline transition ease-in-out duration-700
               href="https://www.linkedin.com/in/mfarabi/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-warning underline transition ease-in-out duration-700"
+              className="hover:text-warning font-bold transition ease-in-out duration-700"
             >
               Mumtahin Farabi
             </a>
