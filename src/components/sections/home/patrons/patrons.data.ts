@@ -15,6 +15,7 @@ import solace_logo from '@root/public/assets/solace_logo.svg'
 import cse_logo_dark from '@root/public/assets/cse_logo_dark.svg'
 import cse_logo_light from '@root/public/assets/cse_logo_light.svg'
 import cbsa_logo from '@root/public/assets/canada_border_services_logo.jpg'
+import skyworks_logo from '@root/public/assets/skyworks_logo.svg'
 
 interface Logo {
   light: StaticImageData
@@ -53,6 +54,13 @@ export const patronsData: Tier = {
       dark: ciena_logo,
       alt: 'Ciena Logo',
       url: 'https://www.ciena.com',
+      overrides: 'w-1/3 bobbing-animation-3',
+    },
+    {
+      light: skyworks_logo,
+      dark: skyworks_logo,
+      alt: 'Skyworks Logo',
+      url: 'https://www.skyworksinc.com',
       overrides: 'w-1/3 bobbing-animation-3',
     },
     {
