@@ -36,7 +36,7 @@ export function ShinyButton(
       onClick={onClick}
     >
       <span
-        className="relative block h-full w-full text-lg uppercase tracking-wide text-tertiary"
+        className="relative block h-full w-full text-lg uppercase tracking-wide dark:text-tertiary text-neutral"
         style={{
           maskImage:
             'linear-gradient(-75deg,hsl(var(--primary)) calc(var(--x) + 20%),transparent calc(var(--x) + 30%),hsl(var(--primary)) calc(var(--x) + 100%))',
