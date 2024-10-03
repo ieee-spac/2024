@@ -12,11 +12,11 @@ export function Hero() {
     // <div className="min-h-screen flex justify-center items-center p-4 w-full dark:bg-black bg-white dark:bg-grid-green-600/[0.5] bg-grid-black/[0.2] overflow-none">
     <div
       id="home"
-      className="overflow-x-clip flex h-screen w-full items-center justify-center bg-black p-4 bg-grid-green-600/[0.5]"
+      className="overflow-x-clip flex h-screen w-full items-center justify-center dark:bg-black bg-background p-4 dark:bg-grid-green-600/[0.5] bg-grid-black/[0.2]"
     >
       {/* Radial gradient for the container to give a faded look */}
       {/* <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_0%,black)] dark:bg-black" /> */}
-      <div className="pointer-events-none absolute inset-0 flex h-screen items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_0%,black)]" />
+      <div className="pointer-events-none absolute inset-0 flex h-screen items-center justify-center dark:bg-black bg-background [mask-image:radial-gradient(ellipse_at_center,transparent_0%,black)]" />
 
       {/* Center box */}
       <ShineBorder
