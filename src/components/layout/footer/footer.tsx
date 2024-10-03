@@ -85,7 +85,7 @@ export function Footer({
         </aside>
 
         {/* SOCIAL MEDIA ICONS */}
-        <nav className="flex flex-wrap">
+        <nav className="flex flex-wrap justify-center 2xs:justify-end">
           {socialMediaData.map(({ name, url, Icon, className }) => (
             <a
               key={name}
