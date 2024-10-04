@@ -16,6 +16,7 @@ import cse_logo_dark from '@root/public/assets/cse_logo_dark.svg'
 import cse_logo_light from '@root/public/assets/cse_logo_light.svg'
 import cbsa_logo from '@root/public/assets/canada_border_services_logo.jpg'
 import skyworks_logo from '@root/public/assets/skyworks_logo.svg'
+import skyworks_logo_white from '@root/public/assets/skyworks_logo_white.png'
 
 interface Logo {
   light: StaticImageData
@@ -58,7 +59,7 @@ export const patronsData: Tier = {
     },
     {
       light: skyworks_logo,
-      dark: skyworks_logo,
+      dark: skyworks_logo_white,
       alt: 'Skyworks Logo',
       url: 'https://www.skyworksinc.com',
       overrides: 'w-1/3 bobbing-animation-3',
