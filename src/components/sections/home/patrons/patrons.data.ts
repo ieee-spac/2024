@@ -77,7 +77,7 @@ export const patronsData: Tier = {
       dark: ised_logo_dark,
       alt: 'ISED logo',
       url: 'https://ised-isde.canada.ca/site/ised/en',
-      overrides: 'w-1/3 bobbing-animation-3',
+      overrides: 'w-1/2 bobbing-animation-3',
     },
     {
       light: nrc_logo,
@@ -98,14 +98,14 @@ export const patronsData: Tier = {
       dark: eef_uottawa_logo_dark,
       alt: 'EEF uOttawa logo',
       url: 'https://www.uottawa.ca/faculty-engineering/student-experience/funding-student-initiatives',
-      overrides: 'w-1/3 bobbing-animation-3',
+      overrides: 'w-1/2 bobbing-animation-3',
     },
     {
       light: ieee_uottawa_logo_light,
       dark: ieee_uottawa_logo_dark,
       alt: 'uOttawa IEEE Logo',
       url: 'https://ieeeuottawa.ca',
-      overrides: 'w-1/3 bobbing-animation-3',
+      overrides: 'w-1/4 bobbing-animation-3',
     },
   ],
   bronze: [
