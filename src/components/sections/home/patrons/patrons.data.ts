@@ -9,7 +9,8 @@ import blackberry_qnx_logo_light from '@root/public/assets/blackberry_qnx_logo_l
 import blackberry_qnx_logo_dark from '@root/public/assets/blackberry_qnx_logo_dark.svg'
 import ised_logo_dark from '@root/public/assets/ised_logo_dark.svg'
 import ised_logo_light from '@root/public/assets/ised_logo_light.svg'
-import eef_uottawa_logo from '@root/public/assets/eef_uottawa_logo.png'
+import eef_uottawa_logo_light from '@root/public/assets/eef_uottawa_logo_light.svg'
+import eef_uottawa_logo_dark from '@root/public/assets/eef_uottawa_logo_dark.svg'
 import nrc_logo from '@root/public/assets/nrc_logo.png'
 import solace_logo from '@root/public/assets/solace_logo.svg'
 import cse_logo_dark from '@root/public/assets/cse_logo_dark.svg'
@@ -93,8 +94,8 @@ export const patronsData: Tier = {
       overrides: 'w-1/4 bobbing-animation-3',
     },
     {
-      light: eef_uottawa_logo,
-      dark: eef_uottawa_logo,
+      light: eef_uottawa_logo_light,
+      dark: eef_uottawa_logo_dark,
       alt: 'EEF uOttawa logo',
       url: 'https://www.uottawa.ca/faculty-engineering/student-experience/funding-student-initiatives',
       overrides: 'w-1/3 bobbing-animation-3',
