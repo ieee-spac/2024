@@ -1,13 +1,14 @@
 'use client'
 
 import Image from 'next/image'
-import CountUp from 'react-countup'
+// import CountUp from 'react-countup'
 
 import exclusive_masterclass_image from '@root/public/assets/exclusive_masterclass_image.svg'
 import networking_booths_image from '@root/public/assets/networking_booths_image.svg'
 import presentation_section_image from '@root/public/assets/presentation_section_image.svg'
 import professional_1_on_1_image from '@root/public/assets/professional_1_on_1_image.svg'
 import workshops_image from '@root/public/assets/workshops_image.svg'
+import { Bubble } from '@/components/sections/home/about/bubble'
 import { ShinyButton } from '@/components/twilight/shiny-button/shiny-button'
 
 const LINK_SPAC_TICKETS = 'https://events.vtools.ieee.org/m/436955'
@@ -49,6 +50,39 @@ const sections = [
       'Explore potential career paths and company cultures directly from the insiders.',
     imgSrc: networking_booths_image,
     imgAlt: 'Networking',
+  },
+]
+
+// Data for the stat bubbles
+const statData: { className: string, number: number, label: string, color: [string, string], size: string }[] = [
+  {
+    className: 'bobbing-animation-1 aspect-square relative flex flex-start',
+    number: 100,
+    label: 'Companies',
+    color: ['#FFD100', '#DE9403'],
+    size: '90%',
+  },
+  {
+    className: 'bobbing-animation-4 aspect-square self-end relative -bottom-4 -left-1 sm:bottom-0 sm:left-0',
+    number: 300,
+    label: 'Attendees',
+    color: ['#03A6DE', '#027AB3'],
+    size: '65%',
+  },
+  {
+    className: 'bobbing-animation-2 aspect-square relative -left-10 sm:-left-10',
+    number: 200,
+    label: 'Students',
+    color: ['#77DD77', '#03A63C'],
+    size: '50%',
+  },
+
+  {
+    className: 'bobbing-animation-3 aspect-square self-end relative -left-14 sm:-left-20 bottom-[20%]',
+    number: 9,
+    label: 'Years',
+    color: ['#FFA500', '#DE6003'],
+    size: '40%',
   },
 ]
 
@@ -120,47 +154,17 @@ export function About() {
         </p>
 
         {/* Colour Bubbles */}
-        <div className="grid h-[38vw] max-h-56 grid-flow-col justify-center">
-          <div className="bobbing-animation-1 flex aspect-square h-full items-center justify-center rounded-full bg-tertiary text-center text-tertiary-foreground sm:-mr-1">
-            <div>
-              <h4 className="text-5xl font-bold min-[375px]:text-6xl min-[425px]:text-7xl sm:text-8xl text-background">
-                <CountUp end={100} duration={3} enableScrollSpy scrollSpyOnce />
-              </h4>
-              <p className="font-bold min-[375px]:text-xl min-[425px]:text-2xl sm:text-3xl text-background">
-                Companies
-              </p>
-            </div>
-          </div>
-          <div className="bobbing-animation-4 -mr-4 flex aspect-square h-[49%] items-center justify-center self-end rounded-full bg-neutral text-center sm:-mr-8">
-            <div>
-              <h4 className="text-xl font-bold min-[375px]:text-3xl min-[425px]:text-4xl sm:text-5xl text-background">
-                <CountUp end={200} duration={3} enableScrollSpy scrollSpyOnce />
-              </h4>
-              <p className=" sm:text-md text-[0.5rem] font-bold min-[375px]:text-xs min-[425px]:text-sm text-background">
-                Students
-              </p>
-            </div>
-          </div>
-          <div className="bobbing-animation-2 -mr-3 flex aspect-square h-[65%] items-center justify-center self-start rounded-full bg-warning text-center text-warning-foreground sm:-mr-5">
-            <div>
-              <h4 className="text-4xl font-bold min-[425px]:text-5xl sm:text-6xl text-background">
-                <CountUp end={9} duration={3} enableScrollSpy scrollSpyOnce />
-              </h4>
-              <p className="font-bold min-[375px]:text-xl min-[425px]:text-2xl sm:text-3xl text-background">
-                Years
-              </p>
-            </div>
-          </div>
-          <div className="bobbing-animation-3 flex aspect-square h-[59%] items-center justify-center self-end rounded-full bg-auxiliary text-center text-auxiliary-content">
-            <div>
-              <h4 className="text-3xl font-bold min-[375px]:text-4xl min-[425px]:text-5xl sm:text-6xl text-background">
-                <CountUp end={300} duration={3} enableScrollSpy scrollSpyOnce />
-              </h4>
-              <p className="sm:text-md text-[0.5rem] font-bold min-[375px]:text-xs min-[425px]:text-sm text-background">
-                Attendees
-              </p>
-            </div>
-          </div>
+        <div className="flex w-full h-[45vw] max-h-80">
+          {statData.map((item, index) => (
+            <Bubble
+              key={index}
+              className={item.className}
+              number={item.number}
+              label={item.label}
+              color={item.color}
+              size={item.size}
+            />
+          ))}
         </div>
 
         <p className="text-base-content">
